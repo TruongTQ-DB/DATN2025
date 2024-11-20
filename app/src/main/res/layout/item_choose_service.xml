@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_10_dp"
+    android:background="@drawable/bg_border_item"
+    android:clickable="true"
+    android:focusable="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/margin_16_dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:layout_marginStart="@dimen/margin_16_dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image_avt"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/rounded_corner_address" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="@dimen/width_0_dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_16_dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/image"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/roboto_bold_14dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/md_black_1000"
+                android:textSize="@dimen/margin_18_dp"
+                tools:text="30 shine" />
+            <ImageView
+                android:id="@+id/imv_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_4_dp"
+                android:layout_marginStart="@dimen/context_padding_13_dp"
+                android:src="@color/color_line"/>
+            <TextView
+                android:id="@+id/tv_content"
+                style="@style/roboto_regular_14dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:layout_marginTop="@dimen/margin_8_dp"
+                android:textColor="@color/color_hint_text_search"
+                tools:text="30 shine" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

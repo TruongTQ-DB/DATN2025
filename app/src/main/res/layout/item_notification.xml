@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/margin_16_dp"
+    android:layout_marginTop="@dimen/margin_2_dp"
+    android:layout_marginBottom="@dimen/margin_10_dp"
+    android:background="@color/white"
+    android:clickable="true"
+    android:elevation="@dimen/margin_6_dp"
+    android:focusable="true"
+    app:cardCornerRadius="@dimen/margin_15_dp"
+    app:cardElevation="@dimen/margin_6_dp">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginVertical="@dimen/margin_16_dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/margin_16_dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/roboto_bold_14dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/md_black_1000"
+                android:textSize="@dimen/margin_16_dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tv_status"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Hai Dang" />
+
+            <TextView
+                android:id="@+id/tv_status"
+                style="@style/roboto_medium_16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_schedule_status_new"
+                android:paddingHorizontal="@dimen/margin_12_dp"
+                android:paddingVertical="@dimen/margin_2_dp"
+                android:text="Mới"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:textSize="@dimen/margin_12_dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_content"
+            style="@style/roboto_regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_4_dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/color_ACAAAF"
+            android:textSize="@dimen/margin_12_dp"
+            tools:text="Hoà Cường Bắc - Đà Nẵng" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.cardview.widget.CardView>

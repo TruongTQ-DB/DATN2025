@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_black_1000">
+
+    <ImageView
+        android:id="@+id/btn_close"
+        android:layout_width="@dimen/margin_40_dp"
+        android:layout_height="@dimen/margin_40_dp"
+        android:padding="@dimen/margin_6_dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_close"
+        app:tint="@color/md_white_1000" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btn_upload"
+        android:layout_below="@id/btn_close"
+        android:layout_marginVertical="@dimen/margin_10_dp"
+        android:scaleType="fitCenter" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/btn_upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="@dimen/margin_16_dp"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:layout_marginBottom="@dimen/margin_16_dp"
+        android:background="@drawable/bg_upload"
+        android:padding="@dimen/margin_10_dp">
+
+        <ImageView
+            android:layout_width="@dimen/margin_20_dp"
+            android:layout_height="@dimen/margin_20_dp"
+            android:src="@drawable/ic_done_white"
+            app:tint="@color/md_white_1000" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tải lên"
+            android:textColor="@color/md_white_1000" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/btn_recap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/margin_16_dp"
+        android:layout_marginTop="@dimen/margin_16_dp"
+        android:layout_marginEnd="@dimen/margin_16_dp"
+        android:layout_marginBottom="@dimen/margin_16_dp"
+        android:background="@drawable/bg_re_capture"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:padding="@dimen/margin_10_dp">
+
+        <ImageView
+            android:layout_width="@dimen/margin_20_dp"
+            android:layout_height="@dimen/margin_20_dp"
+            android:src="@drawable/ic_close"
+            app:tint="@color/md_white_1000" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chụp lại"
+            android:textColor="@color/md_white_1000" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</RelativeLayout>

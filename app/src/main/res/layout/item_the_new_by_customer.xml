@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_16_dp"
+    app:cardCornerRadius="@dimen/margin_12_dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="320dp"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/img_the_new"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/width_0_dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/icon_image"
+            app:shapeAppearanceOverlay="@style/rounded_corner_address"
+            app:layout_constraintDimensionRatio="16:9"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_50_dp"
+            android:background="@color/color_mo"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/img_the_new">
+
+            <TextView
+                android:id="@+id/tv_title_the_new"
+                style="@style/roboto_regular_16dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/ic_the_new"
+                android:drawablePadding="@dimen/margin_8_dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:paddingStart="@dimen/margin_16_dp"
+                android:paddingEnd="@dimen/margin_8_dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/margin_14_dp"
+                app:layout_constraintEnd_toStartOf="@+id/tv_date"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_date"
+                style="@style/roboto_regular_16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:maxLines="2"
+                android:paddingEnd="@dimen/margin_16_dp"
+                android:text="23/2/2021"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_14_sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

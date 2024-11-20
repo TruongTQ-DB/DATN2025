@@ -1,0 +1,154 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/color_0957DF</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <item name="colorControlActivated">@color/color_0957DF</item>
+        <item name="colorControlNormal">@color/color_unchecker_raido</item>
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:splitMotionEvents">false</item>
+    </style>
+
+    <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">@color/selector_box_text_layout</item>
+        <item name="boxStrokeWidth">2dp</item>
+    </style>
+
+    <style name="MyTabLayoutTextAppearance" parent="Base.Widget.Design.TabLayout">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="Roboto_Bold" parent="Base.Widget.Design.TabLayout">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="roboto_regular">
+        <item name="android:textColor">@color/md_black_1000</item>
+        <item name="android:textSize">@dimen/textsize_16_sp</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:fontWeight">700</item>
+        <item name="android:textStyle">normal</item>
+        <item name="lineHeight">17.5dp</item>
+    </style>
+
+    <style name="headerTitle">
+        <item name="fontFamily">@font/roboto_regular</item>
+        <item name="android:textColor">@color/md_black_1000</item>
+        <item name="android:textSize">@dimen/margin_18_dp</item>
+    </style>
+
+    <declare-styleable name="CustomHeaderView">
+        <attr name="leftDrawable" format="reference" />
+        <attr name="rightDrawable" format="reference" />
+        <attr name="title" format="string" />
+        <attr name="header_background" format="color" />
+    </declare-styleable>
+
+    <style name="roboto_medium_16dp">
+        <item name="android:textColor">@color/md_black_1000</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:fontWeight">400</item>
+        <item name="android:textStyle">normal</item>
+        <item name="lineHeight">17.5dp</item>
+    </style>
+
+    <style name="style_header_calendar" parent="roboto_bold_16dp">
+        <item name="fontWeight">700</item>
+    </style>
+
+    <style name="roboto_bold_16dp_fontWeight_700" parent="roboto_bold_16dp">
+        <item name="android:textColor">@color/md_black_1000</item>
+        <item name="android:fontWeight">700</item>
+    </style>
+
+    <style name="roboto_bold_16dp_white" parent="roboto_bold_14dp">
+        <item name="android:textSize">@dimen/margin_16_dp</item>
+    </style>
+    <style name="roboto_bold_10dp">
+        <item name="android:textColor">@color/md_white_1000</item>
+        <item name="android:textSize">@dimen/margin_12_dp</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:fontWeight">700</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="roboto_bold_14dp">
+        <item name="android:textColor">@color/md_white_1000</item>
+        <item name="android:textSize">@dimen/margin_14_dp</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:fontWeight">700</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+
+    <style name="roboto_bold_16dp">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/margin_16_dp</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:fontWeight">600</item>
+        <item name="android:textStyle">normal</item>
+        <item name="lineHeight">18dp</item>
+    </style>
+
+    <style name="roboto_regular_16dp">
+        <item name="android:textColor">@color/md_black_1000</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:fontWeight">400</item>
+        <item name="android:textStyle">normal</item>
+        <item name="lineHeight">17.5dp</item>
+    </style>
+
+    <style name="roboto_medium_16">
+        <item name="android:textColor">@color/md_black_1000</item>
+        <item name="android:textSize">@dimen/margin_16_dp</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:fontWeight">700</item>
+    </style>
+
+    <style name="roboto_medium_16dp_fontWeight_500" parent="roboto_medium_16">
+        <item name="android:textColor">@color/color_text_content</item>
+        <item name="android:fontWeight">500</item>
+        <item name="lineHeight">@dimen/margin_16_dp</item>
+    </style>
+
+    <style name="rounded_corner_address">
+        <item name="cornerSize">8dp</item>
+    </style>
+
+    <style name="style_day_calendar" parent="roboto_regular_16dp">
+        <item name="fontWeight">500</item>
+        <item name="android:textColor">@drawable/cus_selected_day_calendar</item>
+    </style>
+
+    <style name="style_week_calendar" parent="roboto_regular_14dp">
+        <item name="android:textColor">@color/md_black_1000</item>
+    </style>
+
+    <style name="roboto_regular_14dp">
+        <item name="android:textColor">@color/color_hint_text_search</item>
+        <item name="android:textSize">@dimen/margin_14_dp</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:fontWeight">400</item>
+        <item name="android:textStyle">normal</item>
+        <item name="lineHeight">@dimen/margin_15_dp</item>
+    </style>
+
+    <style name="rounded_corner_doctor_avatar">
+        <item name="cornerSize">8dp</item>
+    </style>
+</resources>

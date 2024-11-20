@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9F9F9"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="11dp"
+        android:layout_weight="1"
+        android:clipToPadding="false">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/roboto_bold_14dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="86dp"
+                android:layout_marginBottom="34dp"
+                android:text="Đăng ký lịch Thành công"
+                android:textColor="@color/color_36A693"
+                android:textSize="@dimen/margin_18_dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ic_s" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_8_dp"
+                app:cardCornerRadius="@dimen/margin_12_dp"
+                app:cardUseCompatPadding="true">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/margin_18_dp"
+                    android:paddingBottom="@dimen/margin_24_dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/roboto_bold_14dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="@dimen/margin_16_dp"
+                        android:text="Phiêu khám bệnh"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/margin_18_dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/ic_s" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cl_info_doctor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_border_info"
+                        android:padding="15.5dp"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/img_avatar"
+                            android:layout_width="78dp"
+                            android:layout_height="78dp"
+                            android:scaleType="centerCrop"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:shapeAppearance="@style/rounded_corner_doctor_avatar"
+                            app:srcCompat="@drawable/image_avt" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_barber_name"
+                            style="@style/roboto_bold_14dp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="13dp"
+                            android:ellipsize="end"
+                            android:includeFontPadding="false"
+                            android:maxLines="2"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/margin_18_dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/img_avatar"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="Trần Quang Trường" />
+
+                        <ImageView
+                            android:id="@+id/imv_line"
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="8dp"
+                            android:background="#C7C6CA"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/tv_barber_name"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_barber_name" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_bn_email"
+                            style="@style/roboto_regular_14dp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/tv_barber_name"
+                            app:layout_constraintTop_toBottomOf="@+id/imv_line"
+                            tools:text="Trần Quang Trường" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_date_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_12_dp"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="15dp"
+                        android:paddingTop="15.5dp"
+                        app:layout_constraintTop_toBottomOf="@id/ll_patient_info">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_title_date"
+                                style="@style/roboto_regular_16dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/margin_15_dp"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="Ngày khám"
+                                android:textColor="@color/color_text_grey"
+                                app:layout_constraintEnd_toStartOf="@+id/tv_date"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_date"
+                                style="@style/roboto_bold_16dp"
+                                android:textColor="@color/black"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:gravity="end"
+                                android:maxLines="1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/tv_title_date"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="17.5dp"
+                            android:orientation="horizontal"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_title_time"
+                                style="@style/roboto_regular_16dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/margin_15_dp"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="Giờ khám"
+                                android:textColor="@color/color_text_grey"
+                                app:layout_constraintEnd_toStartOf="@+id/tv_time"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_time"
+                                style="@style/roboto_bold_16dp"
+                                android:textColor="@color/black"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:gravity="end"
+                                android:maxLines="1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/tv_title_time"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="17.5dp"
+                            android:orientation="horizontal"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_title_time_planned"
+                                style="@style/roboto_regular_16dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/margin_15_dp"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="Thời gian dự kiến"
+                                android:textColor="@color/color_text_grey"
+                                app:layout_constraintEnd_toStartOf="@+id/tv_time_planned"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_time_planned"
+                                android:textColor="@color/black"
+                                style="@style/roboto_bold_16dp"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:gravity="end"
+                                android:maxLines="2"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/tv_title_time_planned"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="17.5dp"
+                            android:orientation="horizontal"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_title_department"
+                                style="@style/roboto_regular_16dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/margin_15_dp"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="Khoa khám"
+                                android:textColor="@color/color_text_grey"
+                                app:layout_constraintEnd_toStartOf="@+id/tv_department"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_department"
+                                android:textColor="@color/black"
+                                style="@style/roboto_bold_16dp"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:gravity="end"
+                                android:maxLines="2"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/tv_title_department"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cl_address_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/margin_16_dp"
+                        android:layout_marginTop="17.5dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_title_address"
+                            style="@style/roboto_regular_16dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/margin_15_dp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:paddingBottom="4.5dp"
+                            android:text="Địa chỉ"
+                            android:textColor="@color/color_text_grey"
+                            app:layout_constraintEnd_toStartOf="@+id/tv_address"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_address"
+                            android:textColor="@color/black"
+                            style="@style/roboto_bold_16dp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/tv_title_address"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_back_home"
+                style="@style/roboto_bold_16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_24_dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:paddingBottom="@dimen/margin_2_dp"
+                android:text="@string/booking_successful_back_home"
+                android:textColor="@color/color_36A693"
+                android:textSize="@dimen/margin_18_dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ic_s" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btn_view"
+        style="@style/roboto_bold_14dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_16_dp"
+        android:layout_marginBottom="@dimen/radius_26_dp"
+        android:background="@drawable/bg_add_address"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:padding="@dimen/margin_12_dp"
+        android:text="Xem lịch Khám bệnh"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/margin_18_dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:textAllCaps="false" />
+</androidx.appcompat.widget.LinearLayoutCompat>

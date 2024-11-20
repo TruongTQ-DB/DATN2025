@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.graduate.datn.custom.view.CustomHeaderView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Bệnh nhân" />
+
+    <EditText
+        android:id="@+id/edt_search"
+        style="@style/roboto_medium_16dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_40_dp"
+        android:layout_marginTop="@dimen/margin_8_dp"
+        android:gravity="center_vertical"
+        android:hint="Bệnh nhân"
+        android:drawableLeft="@drawable/ic_search"
+        android:drawablePadding="@dimen/margin_12_dp"
+        android:layout_marginHorizontal="@dimen/margin_16_dp"
+        android:background="@drawable/bg_border_input_login"
+        android:paddingStart="@dimen/margin_14_dp"
+        android:textColor="@color/color_text_title"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        android:textColorHint="@color/color_hint_text_search" />
+    <ImageView
+        android:id="@+id/imv_clear_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="35dp"
+        android:src="@drawable/ic_close"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/edt_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/edt_search"
+        app:tint="@color/black" />
+    <TextView
+        android:id="@+id/tv_show_message_not_result"
+        style="@style/roboto_bold_14dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
+        android:gravity="center"
+        android:text="Không có Bệnh nhân."
+        android:textColor="@color/color_ACAAAF"
+        android:textSize="@dimen/margin_18_dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_search" />
+
+    <com.graduate.datn.base.adapter.BaseRecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_search"
+        tools:listitem="@layout/item_address" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

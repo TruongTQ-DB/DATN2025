@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ui.common.crop.CropImageFragment">
+
+    <com.isseiaoki.simplecropview.CropImageView
+        android:id="@+id/crop_image_view"
+        android:layout_weight="1"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        custom:scv_crop_mode="free"
+        custom:scv_handle_size="8dp"
+        custom:scv_overlay_color="#66FFFFFF"
+        custom:scv_touch_padding="8dp"
+        custom:scv_handle_show_mode="show_always"
+        custom:scv_guide_show_mode="show_always"
+        custom:scv_min_frame_size="40dp"
+        android:layout_above="@id/tv_close"
+        android:layout_marginBottom="@dimen/margin_10_dp"
+        android:layout_marginTop="@dimen/margin_20_dp"
+        custom:scv_frame_stroke_weight="1dp"
+        custom:scv_guide_stroke_weight="1dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_done"
+        android:drawableLeft="@drawable/ic_done_white"
+        android:text="Xong"
+        style="@style/roboto_regular_16dp"
+        android:textSize="@dimen/margin_14_dp"
+        android:background="@drawable/bg_upload"
+        android:padding="@dimen/margin_10_dp"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/margin_20_dp"
+        android:layout_marginBottom="@dimen/margin_20_dp"
+        android:gravity="center"
+        android:layout_width="@dimen/margin_90_dp"
+        android:layout_height="@dimen/height_45_dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_close"
+        android:drawableLeft="@drawable/ic_close_white"
+        android:drawableTint="@color/white"
+        android:text="@string/str_cancel"
+        style="@style/roboto_regular_16dp"
+        android:textSize="@dimen/margin_14_dp"
+        android:background="@drawable/bg_btn_cancel"
+        android:paddingLeft="@dimen/margin_10_dp"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/margin_20_dp"
+        android:layout_marginBottom="@dimen/margin_20_dp"
+        android:layout_width="@dimen/margin_90_dp"
+        android:gravity="center"
+        android:layout_height="@dimen/height_45_dp"/>
+
+</RelativeLayout>

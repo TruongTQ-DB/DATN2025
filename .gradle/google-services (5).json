@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "298808374975",
+    "firebase_url": "https://fir-cuttingschedule-default-rtdb.firebaseio.com",
+    "project_id": "fir-cuttingschedule",
+    "storage_bucket": "fir-cuttingschedule.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:298808374975:android:94003359fc70fe9126f80a",
+        "android_client_info": {
+          "package_name": "com.beetech.hsba.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "298808374975-g4079rb1fen2rh8j9ter8rmsdavvbqj2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.beetech.hsba.dev",
+            "certificate_hash": "41036283a7731aef1648dbe5bed225cb0846d978"
+          }
+        },
+        {
+          "client_id": "298808374975-4n0uchr85v7hql2m2bqi6d150nf0hvjo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRJgsv32XqxEFupL-89ODuVA2Qx1ztTg4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "298808374975-0k482n9imogbp9sflh1kt0f484atus6b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

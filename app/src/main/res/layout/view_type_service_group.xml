@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/ct_blood_select"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/bg_border_input_login"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/tv_type_service_select"
+        style="@style/roboto_medium_16"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="@dimen/margin_14_dp"
+        android:background="@null"
+        android:gravity="center_vertical"
+        android:hint="Chọn loại dịch vụ"
+        android:paddingEnd="@dimen/margin_20_dp"
+        android:textColor="@color/color_text_title"
+        android:textColorHint="@color/color_hint_text_search"
+        android:enabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_select"
+        android:layout_width="@dimen/margin_20_dp"
+        android:layout_height="@dimen/margin_20_dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginEnd="17dp"
+        android:src="@drawable/ic_chevron_right"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_type_service_select"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_type_service_select" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_type_service"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_18_dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_behavior="com.beetech.hsba.custom.behavior.RecyclerViewAppBarBehavior"
+        app:layout_constraintEnd_toEndOf="@+id/tv_type_service_select"
+        app:layout_constraintStart_toStartOf="@+id/tv_type_service_select"
+        app:layout_constraintTop_toBottomOf="@+id/tv_type_service_select"
+        tools:itemCount="5"
+        tools:listitem="@layout/item_type_service" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

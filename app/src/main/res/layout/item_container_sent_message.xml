@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/margin_4_dp">
+
+    <TextView
+        android:id="@+id/text_message"
+        style="@style/roboto_regular_16dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_sent_message"
+        android:padding="@dimen/margin_12_dp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.8"
+        tool:text="abcsasda" />
+
+    <TextView
+        android:id="@+id/text_date_time"
+        style="@style/roboto_regular_16dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_4_dp"
+        android:textColor="@color/bg_gray_tiem_test"
+        android:textSize="@dimen/margin_10_dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_message"
+        tool:text="10:30 AM" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

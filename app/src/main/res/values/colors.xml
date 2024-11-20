@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimaryDark">#03A9F4</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="textinput_default_box_stroke_color" tools:override="true">#FFFFCC40</color>
+
+<!--    fragment login-->
+    <color name="login_while">#FFFFFF</color>
+    <color name="text_black1">#000000</color>
+    <color name="icon_lobin_yellow">#F2B117</color>
+    <color name="bg_bottom_gray">#D6D6D6</color>
+    <color name="bg_activity_gray_while">#F2F2F2</color>
+    <color name="login_teel1">#42A3B3</color>
+    <color name="login_teel2">#5CC2D1</color>
+    <color name="icon_lobin_yellow1">#F0C32D</color>
+    <color name="icon_lobin_yellow2">#F2B117</color>
+    <color name="bg_register_yellow_start">#FFE59B</color>
+    <color name="bg_register_yellow_center">#FFBB00</color>
+    <color name="bg_register_yellow_top">#FFCC40</color>
+    <color name="bg_register_gray">#F2F2F2</color>
+
+<!--    fragment home-->
+    <color name="bg_home">#F2F2F2</color>
+    <color name="bg_header_start">#5CC2D1</color>
+    <color name="bg_header_end">#42A3B3</color>
+
+    <color name="bg_header_left_top">#EFCE47</color>
+    <color name="bg_header_right_top">#FF9B97</color>
+    <color name="bg_header_left_bottom">#64DC9B</color>
+    <color name="bg_header_right_bottom">#6ADCCC</color>
+
+    <color name="bg_body_home">#FFD7D7</color>
+    <color name="boder_radius_body_home">#FFFFFF</color>
+    <color name="notification_red">#ED1C24</color>
+    <color name="icon_gray">#808080</color>
+    <color name="tab_item2_yellow_while">#FFFCDC</color>
+    <color name="bg_test_event_while">#C6FFFFFF</color>
+    <color name="bg_test_fragment">#F2F2F2</color>
+    <color name="bg_gray_tiem_test">#D09A9A9A</color>
+    <color name="boder_avatar_brief">#4BAEBD</color>
+    <color name="boder_brief_gray">#808080</color>
+    <color name="unselec_radio_bottom">#4CAFBF</color>
+    <color name="text_color_daytime_red">#E20404</color>
+    <color name="color_start_header_account">#FFE59B</color>
+    <color name="color_center_header_account">#FFBB00</color>
+    <color name="color_end_header_account">#FFCC40</color>
+    <color name="bg_color_fragment_medda">#F2F2F2</color>
+
+    <color name="color_bg_notification">#F1BD25</color>
+    <color name="color_date">#CE4040</color>
+    <color name="color_item">#FFF9F9</color>
+    <color name="color_item_cancelled">#8E8E8E</color>
+    <color name="color_text_list_medical">#707070</color>
+    <color name="color_text_list_medical_red">#E20404</color>
+    <color name="transparent_selected">#B3FFFFFF</color>
+    <color name="color_bg_button_login_social">#E3E3E3</color>
+    <color name="color_bg_button_login_social_active">#D6D5D5</color>
+    <color name="color_bg_button_delete_medical">#BF707070</color>
+    <color name="color_text_check">#858585</color>
+    <color name="colorE">#c4c4c4</color>
+    <color name="color_bg_chat_text">#F1C32D</color>
+    <color name="color_time_chat">#818181</color>
+    <color name="color_head_chat">#DB5BC1D0</color>
+    <color name="color_header_bottom_sheet">#AD000000</color>
+    <color name="color_bg_text_opposite">#E6EFF1</color>
+    <color name="color_text_reply">#505050</color>
+    <color name="color_header_list_image">#33000000</color>
+    <color name="color_bg_list_chat">#FAFAFA</color>
+    <color name="color_text_find_not_result">#828282</color>
+    <color name="color_text_message_unread">#646464</color>
+    <color name="color_text_title_call_miss">#FF5449</color>
+    <color name="color_view_specialist">#DADADA</color>
+    <color name="color_text_hint">#8897AE</color>
+    <color name="color_icon_password">#ACAAAF</color>
+    <color name="color_text_title">#1B1B1F</color>
+    <color name="color_hint_text_search">#ACAAAF</color>
+    <color name="color_text_content">#ACAAAF</color>
+    <color name="color_bg_profile">#F5F5F5</color>
+    <color name="color_text_detail_new">#0957DF</color>
+    <color name="color_background_change_password">#F5F5F5</color>
+    <color name="color_text_change_password_note">#ACAAAF</color>
+    <color name="color_line_delete">#E4E2E6</color>
+    <color name="color_bg_button_delete">#DE3730</color>
+    <color name="color_bg_button_silent">#0053DA</color>
+    <color name="color_text_grey">#ACAAAF</color>
+    <color name="color_calendar_null">#D4D4D5</color>
+    <color name="color_text_purple">#A04FE9</color>
+    <color name="color_unchecker_raido">#49454F</color>
+
+    <color name="color_bg_pick_camera">#EEEEEE</color>
+    <color name="color_text_pick_camera">#1B1B1F</color>
+    <color name="color_selected_menu">#0957DF</color>
+    <color name="color_C7C6CA">#C7C6CA</color>
+    <color name="color_header_chat">#265BC1D0</color>
+    <color name="color_40000000">#40000000</color>
+    <color name="color_2D3643">#2D3643</color>
+    <color name="color_CB93FF">#CB93FF</color>
+    <color name="color_imv_line">#80A9A9A9</color>
+    <color name="color_text_tab_result">#46464A</color>
+    <color name="color_B4C5FF">#B4C5FF</color>
+    <color name="color_shadow_date">#4D000000</color>
+    <color name="color_shadow_card_view">#66222222</color>
+    <color name="color_E2E2EC">#E2E2EC</color>
+    <color name="color_F9A120">#F9A120</color>
+    <color name="white">#ffffff</color>
+    <color name="color_00BBD3">#00BBD3</color>
+    <color name="color_33E4DB">#33E4DB</color>
+    <color name="color_E9F6FE">#E9F6FE</color>
+    <color name="color_69D7C4">#69D7C4</color>
+    <color name="color_36A693">#007bff</color>
+
+
+    <color name="color_ACAAAF">#ACAAAF</color>
+    <color name="color_0957DF">#0957DF</color>
+    <color name="color_1B1B1Fs">#1B1B1F</color>
+    <color name="color_0D0053DA">#0D0053DA</color>
+    <color name="color_today_null">#990957DF</color>
+    <color name="color_1B1B1F">#1B1B1F</color>
+    <color name="color_591DA3">#591DA3</color>
+    <color name="color_0DE11D">#0DE11D</color>
+    <color name="color_F44747">#F44747</color>
+    <color name="color_bg_container">#F9F9F9</color>
+    <color name="color_line">#C7C6CA</color>
+    <color name="color_mo">#702E2D2D</color>
+</resources>

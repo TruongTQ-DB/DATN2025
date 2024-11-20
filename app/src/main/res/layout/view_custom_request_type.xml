@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/shape_border_radius">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imv_left"
+        android:layout_width="51dp"
+        android:layout_height="@dimen/height_50_dp"
+        android:layout_marginEnd="5dp"
+        android:paddingVertical="13dp"
+        android:paddingStart="18dp"
+        android:paddingEnd="13dp"
+        android:src="@drawable/icon_user"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/tv_request_type"
+        style="@style/roboto_regular"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/height_50_dp"
+        android:background="@null"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:text="Chọn"
+        android:textIsSelectable="false"
+        app:layout_constraintEnd_toStartOf="@+id/imv_select"
+        app:layout_constraintStart_toEndOf="@+id/imv_left"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imv_select"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/height_50_dp"
+        android:layout_marginEnd="5dp"
+        android:padding="@dimen/margin_8_dp"
+        android:src="@drawable/ic_back"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rc_select_request"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:itemCount="5"
+        android:layout_marginEnd="8dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_request_type"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_behavior="com.beetech.hsba.custom.behavior.RecyclerViewAppBarBehavior"
+        app:layout_constraintTop_toBottomOf="@+id/tv_request_type"
+        tools:listitem="@layout/item_select_request"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

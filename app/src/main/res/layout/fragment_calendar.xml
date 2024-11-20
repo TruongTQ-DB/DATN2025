@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.graduate.datn.custom.view.CustomHeaderView
+        android:id="@+id/custom_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:leftDrawable="@drawable/ic_bg_back_doctor"
+        app:rightDrawable="@null"
+        app:title="Chấm công"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.graduate.datn.base.adapter.BaseRecyclerView
+        android:id="@+id/rcv_timekeeping"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/custom_header"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.graduate.datn.custom.view.CustomHeaderView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:leftDrawable="@drawable/ic_bg_back_doctor"
+        app:title="Danh sách lịch làm việc" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/ll_add_work_schedule"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_marginHorizontal="@dimen/margin_16_dp"
+        android:gravity="center_horizontal"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:background="@drawable/bg_add_address"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/header">
+
+        <ImageView
+            android:layout_width="@dimen/margin_20_dp"
+            android:layout_height="@dimen/margin_20_dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_add_address" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/roboto_bold_16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/margin_18_dp"
+            android:layout_marginStart="5dp"
+            android:gravity="center"
+            android:text="@string/list_optional_service_add"
+            android:textColor="@color/white" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_show_calendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_12_dp"
+        app:layout_constraintTop_toBottomOf="@+id/ll_add_work_schedule">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_date"
+            style="@style/roboto_bold_16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/margin_32_dp"
+            android:textSize="@dimen/margin_18_dp"
+            android:layout_marginStart="@dimen/margin_16_dp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="T2, 26/06/2023" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imv_input_date"
+            android:layout_width="@dimen/margin_32_dp"
+            android:layout_height="@dimen/margin_32_dp"
+            android:src="@drawable/ic_back"
+            android:rotation="-90"
+            app:layout_constraintStart_toEndOf="@id/tv_date"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_show_message_not_result"
+        style="@style/roboto_bold_14dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
+        android:gravity="center"
+        android:text="@string/list_optional_service_null"
+        android:textColor="@color/color_ACAAAF"
+        android:textSize="@dimen/margin_18_dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cl_show_calendar" />
+
+    <com.graduate.datn.base.adapter.BaseRecyclerView
+        android:id="@+id/rcv_work_schedule"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_show_calendar"
+        tools:listitem="@layout/item_address" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

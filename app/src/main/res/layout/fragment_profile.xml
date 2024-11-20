@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/bg_home"
+    android:layout_height="match_parent">
+    <com.graduate.datn.custom.view.CustomHeaderView
+        android:id="@+id/custom_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:leftDrawable="@drawable/ic_bg_back_doctor"
+        app:rightDrawable="@null"
+        app:title="Thông tin tài khoản" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsv_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/margin_16_dp"
+        app:layout_constraintTop_toBottomOf="@+id/custom_header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_update">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_10_dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/custom_header">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_avt"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_24_dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imv_avt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="100dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:cardElevation="0dp"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/img_default_avatar_home" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_email_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20_dp"
+                app:margin_start="10"
+                android:text="Email"
+                style="@style/roboto_bold_16dp"
+                android:textColor="@color/black" />
+
+            <com.graduate.datn.custom.view.InputView
+                android:id="@+id/input_email"
+                app:background_input_view="@drawable/bg_boder_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_40_dp"
+                android:layout_marginTop="@dimen/margin_12_dp"
+                app:input_hint="Email"
+                app:set_focusable="true"
+                app:layout_constraintTop_toBottomOf="@+id/tv_email"
+                app:margin_start="10"/>
+            <TextView
+                android:id="@+id/tv_name_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20_dp"
+                app:margin_start="10"
+                android:text="Họ và tên"
+                style="@style/roboto_bold_16dp"
+                android:textColor="@color/black" />
+
+            <com.graduate.datn.custom.view.InputView
+                android:id="@+id/input_name"
+                app:background_input_view="@drawable/bg_boder_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_40_dp"
+                android:layout_marginTop="@dimen/margin_12_dp"
+                app:input_hint="Họ và tên"
+                app:layout_constraintTop_toBottomOf="@+id/tv_email"
+                app:margin_start="10"/>
+            <TextView
+                android:id="@+id/tv_detail_name_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20_dp"
+                app:margin_start="10"
+                android:text="Chi tiết"
+                style="@style/roboto_bold_16dp"
+                android:textColor="@color/black" />
+
+            <com.graduate.datn.custom.view.InputView
+                android:id="@+id/input_detail_name"
+                app:background_input_view="@drawable/bg_boder_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_40_dp"
+                android:layout_marginTop="@dimen/margin_12_dp"
+                app:input_hint="Chi tiết"
+                app:layout_constraintTop_toBottomOf="@+id/tv_email"
+                app:margin_start="10"/>
+
+            <TextView
+                android:id="@+id/tv_phone_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20_dp"
+                app:margin_start="10"
+                android:text="Số điện thoại"
+                style="@style/roboto_bold_16dp"
+                android:textColor="@color/black" />
+
+            <com.graduate.datn.custom.view.InputView
+                android:id="@+id/input_phone"
+                app:background_input_view="@drawable/bg_boder_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_40_dp"
+                android:layout_marginTop="12dp"
+                app:input_hint="Nhập số điện thoại"
+                app:input_type="phone"
+                app:layout_constraintTop_toBottomOf="@+id/input_name"
+                app:margin_start="10"/>
+
+            <TextView
+                android:id="@+id/tv_birthday_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20_dp"
+                app:margin_start="10"
+                android:text="Ngày sinh"
+                style="@style/roboto_bold_16dp"
+                android:textColor="@color/black" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_choose_birthday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_12_dp"
+                android:background="@drawable/bg_boder_edit_text"
+                app:layout_constraintTop_toBottomOf="@+id/input_phone"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/margin_20_dp"
+                    android:layout_height="@dimen/margin_20_dp"
+                    android:layout_marginEnd="17dp"
+                    android:src="@drawable/icon_calendar"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/edt_birthday"
+                    style="@style/roboto_medium_16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:hint="@string/register_input_birthday"
+                    android:paddingStart="@dimen/margin_14_dp"
+                    android:textColor="@color/color_text_title"
+                    android:textColorHint="@color/color_hint_text_search"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_gender_title"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/margin_20_dp"
+                app:margin_start="10"
+                android:text="Giới tính"
+                style="@style/roboto_bold_16dp"
+                android:textColor="@color/black" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/ll_gender"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp"
+                android:gravity="center_vertical"
+                android:layout_marginStart="-5dp"
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toBottomOf="@+id/cl_choose_birthday"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imv_male"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_rbtn_unselected"
+                    android:layout_width="@dimen/margin_30_dp"
+                    android:layout_height="@dimen/margin_30_dp"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:text="Nam"
+                    style="@style/roboto_bold_16dp"
+                    android:layout_marginStart="3dp"
+                    android:textColor="@color/color_text_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imv_female"
+                    android:layout_marginStart="@dimen/margin_30_dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_rbtn_unselected"
+                    android:layout_width="@dimen/margin_30_dp"
+                    android:layout_height="@dimen/margin_30_dp"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:text="Nữ"
+                    style="@style/roboto_bold_16dp"
+                    android:layout_marginStart="3dp"
+                    android:textColor="@color/color_text_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imv_other"
+                    android:layout_marginStart="@dimen/margin_30_dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_rbtn_unselected"
+                    android:layout_width="@dimen/margin_30_dp"
+                    android:layout_height="@dimen/margin_30_dp"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:text="Khác"
+                    style="@style/roboto_bold_16dp"
+                    android:layout_marginStart="3dp"
+                    android:textColor="@color/color_text_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <TextView
+                android:id="@+id/tv_body_mass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20_dp"
+                app:margin_start="10"
+                android:text="Chỉ số cơ thể"
+                style="@style/roboto_bold_16dp"
+                android:textColor="@color/black" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/layout_cm"
+                    android:weightSum="10"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.graduate.datn.custom.view.InputView
+                        android:id="@+id/input_cm"
+                        app:background_input_view="@drawable/bg_boder_edit_text"
+                        android:layout_weight="9"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        app:color_hint="@color/color_text_grey"
+                        app:input_hint="Chiều cao"
+                        app:input_type="normal"
+                        app:layout_constraintTop_toBottomOf="@+id/input_name"
+                        app:margin_start="10"/>
+                    <TextView
+                        android:text="Cm"
+                        style="@style/roboto_bold_16dp"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/layout_kg"
+                    android:layout_marginTop="6dp"
+
+                    android:weightSum="10"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@id/layout_cm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.graduate.datn.custom.view.InputView
+                        android:id="@+id/input_kg"
+                        app:background_input_view="@drawable/bg_boder_edit_text"
+                        android:layout_weight="9"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        app:color_hint="@color/color_text_grey"
+                        app:input_hint="Cân nặng"
+                        app:input_type="normal"
+                        app:layout_constraintTop_toBottomOf="@+id/input_name"
+                        app:margin_start="10"/>
+                    <TextView
+                        android:text="Kg"
+                        style="@style/roboto_bold_16dp"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/layout_rh"
+                    android:layout_marginTop="6dp"
+                    android:weightSum="10"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@id/layout_kg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.graduate.datn.custom.view.InputView
+                        android:id="@+id/input_rh"
+                        app:background_input_view="@drawable/bg_boder_edit_text"
+                        android:layout_weight="9"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        app:color_hint="@color/color_text_grey"
+                        app:input_hint="Nhóm máu"
+                        app:input_type="normal"
+                        app:layout_constraintTop_toBottomOf="@+id/input_name"
+                        app:margin_start="10"/>
+                    <TextView
+                        android:text="Rh"
+                        style="@style/roboto_bold_16dp"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"/>
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/tv_cmnd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20_dp"
+                app:margin_start="10"
+                android:text="CCCD/CMND"
+                style="@style/roboto_bold_16dp"
+                android:textColor="@color/black" />
+
+            <com.graduate.datn.custom.view.InputView
+                android:id="@+id/input_cnnd"
+                app:background_input_view="@drawable/bg_boder_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_40_dp"
+                android:layout_marginTop="12dp"
+                app:input_hint="Số CCCD/CMND của bạn"
+                app:input_type="phone"
+                app:layout_constraintTop_toBottomOf="@+id/input_name"
+                app:margin_start="10"/>
+            <TextView
+                android:id="@+id/tv_bhyt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20_dp"
+                app:margin_start="10"
+                android:text="CCCD/CMND"
+                style="@style/roboto_bold_16dp"
+                android:textColor="@color/black" />
+
+            <com.graduate.datn.custom.view.InputView
+                android:id="@+id/input_bhyt"
+                app:background_input_view="@drawable/bg_boder_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_40_dp"
+                android:layout_marginTop="12dp"
+                app:input_hint="Mã số thẻ bảo hiểm y tế"
+                app:input_type="normal"
+                app:layout_constraintTop_toBottomOf="@+id/input_name"
+                app:margin_start="10"/>
+
+
+            <TextView
+                android:id="@+id/tv_address_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20_dp"
+                app:margin_start="10"
+                android:text="Địa chỉ"
+                style="@style/roboto_bold_16dp"
+                android:textColor="@color/black" />
+            <EditText
+                android:id="@+id/input_address"
+                style="@style/roboto_medium_16dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_40_dp"
+                android:layout_marginTop="@dimen/margin_12_dp"
+                android:gravity="center_vertical"
+                android:hint="Nhập địa chỉ"
+                app:layout_constraintTop_toBottomOf="@+id/ll_gender"
+                android:background="@drawable/bg_boder_edit_text"
+                android:paddingStart="@dimen/margin_14_dp"
+                android:textColor="@color/color_text_title"
+                android:textColorHint="@color/color_hint_text_search" />
+
+            <TextView
+                android:id="@+id/tv_choose_address_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20_dp"
+                app:margin_start="10"
+                android:text="Cơ sở phòng khám"
+                style="@style/roboto_bold_16dp"
+                android:textColor="@color/black" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_choose_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_border_input_login"
+                app:layout_constraintTop_toBottomOf="@+id/input_address"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/edt_address"
+                    style="@style/roboto_medium_16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@null"
+                    app:set_focusable="true"
+                    android:hint="@string/add_optional_service_choose_address"
+                    android:paddingStart="@dimen/margin_14_dp"
+                    app:background_input_view="@drawable/bg_border_input_login"
+                    android:textColor="@color/color_text_title"
+                    android:textColorHint="@color/color_hint_text_search"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/tv_choose_service_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20_dp"
+                app:margin_start="10"
+                android:text="Dịch vụ"
+                style="@style/roboto_bold_16dp"
+                android:textColor="@color/black" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_choose_service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:minHeight="@dimen/margin_40_dp"
+                android:background="@drawable/bg_border_input_login"
+                app:layout_constraintTop_toBottomOf="@+id/type_service"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcv_service"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    tools:itemCount="5"
+                    android:paddingBottom="@dimen/margin_2_dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_behavior="com.beetech.hsba.custom.behavior.RecyclerViewAppBarBehavior"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:listitem="@layout/item_select_request"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_choose_optional_service_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20_dp"
+                app:margin_start="10"
+                android:text="Dịch vụ tuỳ chọn"
+                style="@style/roboto_bold_16dp"
+                android:textColor="@color/black" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_choose_optional_service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:minHeight="@dimen/margin_40_dp"
+                android:background="@drawable/bg_border_input_login"
+                app:layout_constraintTop_toBottomOf="@+id/cl_choose_service"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcv_optional_service"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    tools:itemCount="5"
+                    android:paddingBottom="@dimen/margin_2_dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_behavior="com.beetech.hsba.custom.behavior.RecyclerViewAppBarBehavior"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:listitem="@layout/item_select_request"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_20_dp"
+        android:layout_marginBottom="@dimen/margin_16_dp"
+        android:layout_marginHorizontal="@dimen/margin_16_dp"
+        android:background="@drawable/bg_add_address"
+        android:text="Cập nhật"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nsv_container" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

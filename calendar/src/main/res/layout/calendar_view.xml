@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/header"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    >
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:layout_toStartOf="@id/next"
+      android:id="@+id/previous"
+      android:layout_width="30dp"
+      android:layout_height="30dp"
+      android:padding="9dp"
+      android:contentDescription="@string/previous"
+      android:rotation="180"
+      android:layout_marginStart="20dp"
+      android:background="?attr/selectableItemBackgroundBorderless"
+      app:srcCompat="@drawable/ic_bg_back_yellow"
+      />
+
+  <TextView
+      android:id="@+id/month_name"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerVertical="true"
+      android:layout_weight="1"
+      android:gravity="center"
+      android:textColor="@color/black"
+      android:textStyle="bold"
+      android:textSize="16dp"
+      tools:text="August 2018" />
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:layout_alignParentEnd="true"
+      android:id="@+id/next"
+      android:layout_width="30dp"
+      android:background="?attr/selectableItemBackgroundBorderless"
+      android:padding="9dp"
+      android:layout_height="30dp"
+      android:contentDescription="@string/next"
+      android:layout_marginEnd="20dp"
+      app:srcCompat="@drawable/ic_bg_back_yellow"
+      />
+
+</LinearLayout>

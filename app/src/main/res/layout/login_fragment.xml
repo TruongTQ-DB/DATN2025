@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_splash"
+        android:clipToPadding="false"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="114dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/logo_app"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginTop="80dp"
+                android:src="@drawable/img_logo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/ll_form_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_16_dp"
+                android:layout_marginTop="@dimen/height_45_dp"
+                android:background="@drawable/bg_form_input_login"
+                android:orientation="vertical"
+                android:paddingHorizontal="23dp"
+                android:paddingTop="28dp"
+                android:paddingBottom="25dp"
+                app:layout_constraintTop_toBottomOf="@+id/logo_app"
+                tools:layout_editor_absoluteX="13dp">
+
+                <com.graduate.datn.custom.view.InputView
+                    android:id="@+id/input_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_40_dp"
+                    app:background_input_view="@drawable/bg_border_input_login"
+                    app:input_hint="Email"
+                    app:layout_constraintTop_toBottomOf="@+id/logo_app"
+                    app:left_drawable="@null"
+                    app:margin_start="12"
+                    app:type="login" />
+
+                <com.graduate.datn.custom.view.InputView
+                    android:id="@+id/input_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_40_dp"
+                    android:layout_marginTop="22dp"
+                    app:background_input_view="@drawable/bg_border_input_login"
+                    app:input_hint="@string/login_password_hint"
+                    app:input_type="password"
+                    app:layout_constraintEnd_toEndOf="@+id/login_edt_username"
+                    app:layout_constraintStart_toStartOf="@+id/login_edt_username"
+                    app:layout_constraintTop_toBottomOf="@+id/login_edt_username"
+                    app:left_drawable="@null"
+                    app:margin_start="12"
+                    app:set_padding_end="50"
+                    app:type="login" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/login_tv_forget_password"
+                    style="@style/roboto_regular_16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginEnd="5dp"
+                    android:text="Quên mật khẩu?"
+                    android:textColor="@color/color_36A693" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/btn_login"
+                    style="@style/roboto_medium_16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_40_dp"
+                    android:layout_marginTop="@dimen/margin_12_dp"
+                    android:background="@drawable/bg_btn_login_new"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:gravity="center"
+                    android:text="@string/btn_login_title"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_register"
+                    style="@style/roboto_bold_16dp_white"
+                    android:textColor="@color/color_36A693"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="19dp"
+                    android:text="@string/str_register_login" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_or_login_by"
+                style="@style/roboto_bold_16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="44dp"
+                android:text="Hoặc đăng nhập qua"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_form_login" />
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_marginTop="50dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_or_login_by"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:weightSum="9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ll_facebook"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="9dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_facebook" />
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ll_google"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="9dp"
+                    android:src="@drawable/img_google" />
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="9dp"
+                    android:src="@drawable/img_st" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+    <androidx.appcompat.widget.AppCompatImageView
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:src="@drawable/img_bottom"
+        android:layout_width="200dp"
+        android:layout_height="200dp"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:src="@drawable/img_top"
+        android:layout_marginLeft="-20dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"/>
+
+    <!--    <androidx.core.widget.NestedScrollView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent">-->
+
+    <!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent">-->
+
+    <!--            <ImageView-->
+    <!--                android:id="@+id/imv_logo"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="86dp"-->
+    <!--                android:src="@drawable/ic_logo_favorite"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--            <com.beetech.hsba.custom.view.InputView-->
+    <!--                android:id="@+id/input_username"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="@dimen/width_46_dp"-->
+    <!--                android:layout_marginTop="70dp"-->
+    <!--                app:background_input_view="@drawable/bg_border_input_login"-->
+    <!--                app:input_hint="@string/login_username_hint"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/imv_logo"-->
+    <!--                app:margin_start="12"-->
+    <!--                app:left_drawable="@null"-->
+    <!--                app:type="login" />-->
+
+    <!--            <com.beetech.hsba.custom.view.InputView-->
+    <!--                android:id="@+id/input_password"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="@dimen/width_46_dp"-->
+    <!--                android:layout_marginTop="22dp"-->
+    <!--                app:background_input_view="@drawable/bg_border_input_login"-->
+    <!--                app:input_hint="@string/login_password_hint"-->
+    <!--                app:input_type="password"-->
+    <!--                app:layout_constraintEnd_toEndOf="@+id/input_username"-->
+    <!--                app:layout_constraintStart_toStartOf="@+id/input_username"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/input_username"-->
+    <!--                app:left_drawable="@null"-->
+    <!--                app:margin_start="12"-->
+    <!--                app:set_padding_end="50"-->
+    <!--                app:type="login" />-->
+
+    <!--            <androidx.appcompat.widget.AppCompatButton-->
+    <!--                android:id="@+id/btn_sign_in"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="22dp"-->
+    <!--                android:background="@drawable/bg_add_address"-->
+    <!--                android:foreground="?attr/selectableItemBackgroundBorderless"-->
+    <!--                android:text="Đăng nhập"-->
+    <!--                android:textColor="@color/white"-->
+    <!--                android:textSize="@dimen/margin_16_dp"-->
+    <!--                style="@style/roboto_regular_14dp"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/input_password" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/tv_register"-->
+    <!--                style="@style/roboto_bold_16dp_white"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="@dimen/margin_30_dp"-->
+    <!--                android:text="@string/str_register_login"-->
+    <!--                android:textColor="@color/text_black"-->
+    <!--                android:textSize="@dimen/margin_18_dp"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/btn_sign_in" />-->
+
+    <!--            <androidx.appcompat.widget.LinearLayoutCompat-->
+    <!--                android:id="@+id/ll_facebook"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="96dp"-->
+    <!--                android:background="@drawable/bg_btn_login_social"-->
+    <!--                android:foreground="?attr/selectableItemBackgroundBorderless"-->
+    <!--                android:gravity="center_vertical"-->
+    <!--                android:paddingVertical="@dimen/margin_6_dp"-->
+    <!--                app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--                app:layout_constraintRight_toRightOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@id/tv_register">-->
+
+    <!--                <androidx.appcompat.widget.AppCompatImageView-->
+    <!--                    android:layout_width="34dp"-->
+    <!--                    android:layout_height="34dp"-->
+    <!--                    android:layout_marginStart="9dp"-->
+    <!--                    android:scaleType="centerCrop"-->
+    <!--                    android:src="@drawable/ic_facebook" />-->
+
+    <!--                <TextView-->
+    <!--                    style="@style/roboto_regular_16dp"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_marginStart="29dp"-->
+    <!--                    android:text="Đăng nhập băng facebook"-->
+    <!--                    android:textColor="@color/md_white_1000"-->
+    <!--                    tools:ignore="SpUsage" />-->
+
+    <!--            </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+    <!--            <androidx.appcompat.widget.LinearLayoutCompat-->
+    <!--                android:id="@+id/ll_google"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="@dimen/margin_10_dp"-->
+    <!--                android:background="@drawable/bg_btn_login_social"-->
+    <!--                android:foreground="?attr/selectableItemBackgroundBorderless"-->
+    <!--                android:gravity="center_vertical"-->
+    <!--                android:paddingVertical="@dimen/margin_6_dp"-->
+    <!--                app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--                app:layout_constraintRight_toRightOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@id/ll_facebook">-->
+
+    <!--                <androidx.appcompat.widget.AppCompatImageView-->
+    <!--                    android:layout_width="34dp"-->
+    <!--                    android:layout_height="34dp"-->
+    <!--                    android:layout_marginStart="9dp"-->
+    <!--                    android:src="@drawable/ic_google" />-->
+
+    <!--                <TextView-->
+    <!--                    style="@style/roboto_regular_16dp"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_marginStart="29dp"-->
+    <!--                    android:text="Đăng nhập với Google"-->
+    <!--                    android:textColor="@color/md_white_1000"-->
+    <!--                    tools:ignore="SpUsage" />-->
+
+    <!--            </androidx.appcompat.widget.LinearLayoutCompat>-->
+    <!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+    <!--    </androidx.core.widget.NestedScrollView>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

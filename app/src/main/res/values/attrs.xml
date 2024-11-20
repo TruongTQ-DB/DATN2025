@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BaseRecyclerView">
+        <attr name="brv_padding" format="dimension" />
+        <attr name="brv_padding_start" format="dimension" />
+        <attr name="brv_padding_end" format="dimension" />
+        <attr name="brv_padding_top" format="dimension" />
+        <attr name="brv_padding_bottom" format="dimension" />
+        <attr name="brv_enable_refresh" format="boolean" />
+        <attr name="brv_text_no_result" format="string|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="InputView">
+        <attr name="left_drawable" format="reference" />
+        <attr name="input_hint" format="string" />
+        <attr name="is_confirm_password" format="boolean" />
+        <attr name="type"/>
+        <attr name="input_type"/>
+        <attr name="padding_vertical" format="integer" />
+        <attr name="disable_paste" format="boolean" />
+        <attr name="margin_start" format="integer" />
+        <attr name="color_hint" format="color" />
+        <attr name="background_input_view" format="reference" />
+        <attr name="set_enabled" format="boolean" />
+        <attr name="max_length" format="integer" />
+        <attr name="set_padding_end" format="integer" />
+        <attr name="set_text_size" format="integer" />
+        <attr name="set_text_font" format="reference" />
+        <attr name="set_focusable" format="boolean" />
+    </declare-styleable>
+
+    <attr name="type" format="enum" >
+        <enum name="login" value="6" />
+        <enum name="register" value="7" />
+    </attr>
+
+    <attr name="input_type" format="enum" >
+        <enum name="password" value="1" />
+        <enum name="normal" value="2" />
+        <enum name="phone" value="8" />
+        <enum name="search" value="4" />
+    </attr>
+</resources>

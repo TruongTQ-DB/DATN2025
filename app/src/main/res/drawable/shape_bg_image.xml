@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:startColor="@color/icon_lobin_yellow1"
+        android:endColor="@color/icon_lobin_yellow2"
+        android:type="linear"
+        android:angle="90"/>
+    <corners
+        android:bottomLeftRadius="@dimen/radius_22_5_dp"
+        android:topLeftRadius="@dimen/radius_22_5_dp"/>
+    <stroke
+        android:width="0.5dp"
+        android:color="@color/login_while"/>
+</shape>

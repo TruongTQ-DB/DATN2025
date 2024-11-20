@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:parentTag="android.widget.FrameLayout">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingHorizontal="58dp"
+        tools:ignore="UselessParent">
+
+        <sh.tyy.wheelpicker.core.TextWheelPickerView
+            android:id="@+id/left_picker"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:highlighting_visible="false" />
+
+        <sh.tyy.wheelpicker.core.TextWheelPickerView
+            android:id="@+id/mid_picker"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:highlighting_visible="false" />
+
+        <sh.tyy.wheelpicker.core.TextWheelPickerView
+            android:id="@+id/right_picker"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:highlighting_visible="false" />
+    </LinearLayout>
+</merge>

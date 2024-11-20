@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_10_dp"
+    android:layout_marginEnd="3dp"
+    android:gravity="center">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_time"
+        style="@style/roboto_regular_14dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_time_schedule_normal"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/margin_2_dp"
+        android:paddingVertical="7dp"
+        android:textColor="@color/black"
+        tools:text="8:88 - 8:30" />
+</androidx.appcompat.widget.LinearLayoutCompat>

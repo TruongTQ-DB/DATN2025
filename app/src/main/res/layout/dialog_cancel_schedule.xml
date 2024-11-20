@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_border_info"
+        android:padding="@dimen/margin_20_dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title_cancel_schedule"
+            style="@style/roboto_bold_16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:textSize="@dimen/margin_18_dp"
+            android:text="Chọn lý do huỷ"
+            android:textAlignment="center"
+            android:textColor="@color/color_36A693" />
+
+        <RadioGroup
+            android:id="@+id/rg_reason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title_cancel_schedule"
+            android:layout_marginTop="@dimen/margin_8_dp">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/cb_no_test"
+                style="@style/roboto_regular_16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:button="@drawable/cb_reason_cancel"
+                android:paddingVertical="@dimen/margin_12_dp"
+                android:paddingStart="@dimen/margin_12_dp"
+                android:text="Tôi muốn đổi lại thông tin cá nhân"
+                android:textColor="@color/color_1B1B1F"
+                tools:ignore="RtlSymmetry" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/margin_34_dp"
+                android:background="@color/color_bg_pick_camera" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/cb_change_doctor"
+                style="@style/roboto_regular_16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:button="@drawable/cb_reason_cancel"
+                android:paddingVertical="@dimen/margin_12_dp"
+                android:paddingStart="@dimen/margin_12_dp"
+                android:text="Tôi muốn đổi phương thức thanh toán"
+                android:textColor="@color/color_1B1B1F"
+                tools:ignore="RtlSymmetry" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/margin_34_dp"
+                android:background="@color/color_bg_pick_camera" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/cb_change_time"
+                style="@style/roboto_regular_16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:button="@drawable/cb_reason_cancel"
+                android:paddingVertical="@dimen/margin_12_dp"
+                android:paddingStart="@dimen/margin_12_dp"
+                android:text="Tôi muốn đổi ngày, giờ khám"
+                android:textColor="@color/color_1B1B1F"
+                tools:ignore="RtlSymmetry" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/margin_34_dp"
+                android:background="@color/color_bg_pick_camera" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/cb_other_reason"
+                style="@style/roboto_regular_16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:button="@drawable/cb_reason_cancel"
+                android:paddingVertical="@dimen/margin_12_dp"
+                android:paddingStart="@dimen/margin_12_dp"
+                android:text="Lý do khác"
+                android:textColor="@color/color_1B1B1F"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edt_other_reason"
+                android:gravity="start"
+                android:maxLines="5"
+                style="@style/roboto_regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/margin_12_dp"
+                android:background="@drawable/bg_input_reason"
+                android:hint="Nhập lý do của bạn"
+                android:lines="5"
+                android:visibility="gone"
+                android:padding="@dimen/margin_12_dp" />
+        </RadioGroup>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_yes"
+            style="@style/roboto_bold_16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rg_reason"
+            android:layout_marginTop="@dimen/margin_8_dp"
+            android:textSize="@dimen/margin_18_dp"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_cancel_schedule_unclicked"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:enabled="false"
+            android:padding="@dimen/margin_10_dp"
+            android:text="Xác nhận"
+            android:textAllCaps="false" />
+    </RelativeLayout>
+</FrameLayout>

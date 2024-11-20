@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingDefaultResource">
+
+    <com.graduate.datn.custom.view.CustomHeaderView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:leftDrawable="@drawable/ic_bg_back_doctor"
+        app:title="Thông tin người đặt" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toTopOf="@id/btn_next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_information"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_15_dp"
+                android:layout_marginTop="@dimen/margin_9_dp"
+                android:orientation="vertical"
+                app:cardCornerRadius="@dimen/radius_12_dp"
+                app:cardElevation="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="17.5dp">
+
+                    <LinearLayout
+                        android:id="@+id/ll_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            style="@style/roboto_bold_14dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/margin_18_dp"
+                            android:textColor="@color/black"
+                            android:text="Họ và tên" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_name"
+                            style="@style/roboto_regular_16dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_6_dp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            tools:text="Trần Quang Trường" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_birthday"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_22_dp"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toBottomOf="@+id/ll_name">
+
+                        <TextView
+                            style="@style/roboto_bold_14dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/margin_18_dp"
+                            android:text="Ngày sinh" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_birthday"
+                            style="@style/roboto_regular_16dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_6_dp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            tools:text="Trần Quang Trường" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_22_dp"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toBottomOf="@+id/ll_birthday">
+
+                        <TextView
+                            style="@style/roboto_bold_14dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/margin_18_dp"
+                            android:text="Email" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_email"
+                            style="@style/roboto_regular_16dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_6_dp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            tools:text="Trần Quang Trường" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_22_dp"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toBottomOf="@+id/ll_email">
+
+                        <TextView
+                            style="@style/roboto_bold_14dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/margin_18_dp"
+                            android:text="Số điện thoại" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_phone"
+                            style="@style/roboto_regular_16dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_6_dp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            tools:text="Trần Quang Trường" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_sex"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_22_dp"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toBottomOf="@+id/ll_phone">
+
+                        <TextView
+                            style="@style/roboto_bold_14dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/margin_18_dp"
+                            android:text="Giới tính" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_sex"
+                            style="@style/roboto_regular_16dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_6_dp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            tools:text="Trần Quang Trường" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_22_dp"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toBottomOf="@+id/ll_sex">
+
+                        <TextView
+                            style="@style/roboto_bold_14dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/margin_18_dp"
+                            android:textColor="@color/black"
+                            android:text="Địa chỉ" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_address"
+                            android:maxLines="3"
+                            android:ellipsize="end"
+                            style="@style/roboto_regular_16dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_6_dp"
+                            tools:text="Trần Quang Trường" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/ll_detail_ce"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_22_dp"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toBottomOf="@+id/ll_address">
+
+                        <TextView
+                            style="@style/roboto_bold_14dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/margin_18_dp"
+                            android:textColor="@color/black"
+                            android:text="Tình trạng sức khỏe" />
+
+                        <EditText
+                            android:id="@+id/edt_address"
+                            style="@style/roboto_medium_16dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="@dimen/margin_12_dp"
+                            android:gravity="center_vertical"
+                            android:hint="Vui lòng ghi rõ triệu chứng.tình trạng\n sức khỏe của bạn"
+                            android:background="@drawable/bg_border_input_login"
+                            android:paddingStart="@dimen/margin_14_dp"
+                            android:textColor="@color/color_text_title"
+                            android:textColorHint="@color/color_hint_text_search" />
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_update_profile"
+                        style="@style/roboto_regular_16dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="Sửa"
+                        android:textColor="#0957DF"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_20_dp"
+        android:layout_marginVertical="@dimen/margin_16_dp"
+        android:background="@drawable/bg_add_address"
+        android:text="Tiếp theo"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

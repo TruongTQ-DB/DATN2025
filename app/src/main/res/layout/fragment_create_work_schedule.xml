@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="@dimen/margin_16_dp">
+
+    <com.graduate.datn.custom.view.CustomHeaderView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:leftDrawable="@drawable/ic_bg_back_doctor"
+        app:title="Tạo lịch làm việc" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_choose_staff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_border_input_login"
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/margin_20_dp"
+                    android:layout_height="@dimen/margin_20_dp"
+                    android:layout_marginEnd="17dp"
+                    android:src="@drawable/ic_chevron_right"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/edt_staff"
+                    style="@style/roboto_medium_16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:hint="Chọn Nhân viên"
+                    android:paddingStart="@dimen/margin_14_dp"
+                    android:textColor="@color/color_text_title"
+                    android:textColorHint="@color/color_hint_text_search"
+                    app:background_input_view="@drawable/bg_border_input_login"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_choose_time_schedule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_border_input_login"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/cl_choose_staff">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/margin_20_dp"
+                    android:layout_height="@dimen/margin_20_dp"
+                    android:layout_marginEnd="17dp"
+                    android:src="@drawable/ic_chevron_right"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/edt_time_schedule"
+                    style="@style/roboto_medium_16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:hint="Chọn thời gian ca làm việc"
+                    android:paddingStart="@dimen/margin_14_dp"
+                    android:textColor="@color/color_text_title"
+                    android:textColorHint="@color/color_hint_text_search"
+                    app:background_input_view="@drawable/bg_border_input_login"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                android:id="@+id/calendar_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_border_input_login"
+                android:padding="@dimen/margin_10_dp"
+                app:layout_constraintTop_toBottomOf="@+id/cl_choose_time_schedule" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_create"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_30_dp"
+                android:layout_marginBottom="@dimen/margin_20_dp"
+                android:background="@drawable/bg_add_address"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:text="@string/add_service_complete"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/calendar_view" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

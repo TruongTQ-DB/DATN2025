@@ -1,0 +1,116 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="2dp"
+    android:id="@+id/layout_input"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_border_text_box"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/bg_icon"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingVertical="13dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ic_left"
+            android:layout_width="@dimen/margin_20_dp"
+            android:layout_height="@dimen/margin_20_dp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edt_input"
+        style="@style/roboto_medium_16dp"
+        android:layout_width="0dp"
+        android:layout_height="41dp"
+        android:background="@null"
+        android:inputType="text"
+        android:textColor="@color/color_text_title"
+        android:textColorHint="#ACAAAF"
+        android:textIsSelectable="true"
+        android:paddingEnd="@dimen/margin_10_dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ic_show_hide_password"
+        app:layout_constraintStart_toEndOf="@+id/bg_icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_input"
+        style="@style/roboto_medium_16dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textColor="@color/color_text_title"
+        android:paddingEnd="@dimen/margin_10_dp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:visibility="gone"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ic_show_hide_password"
+        app:layout_constraintStart_toEndOf="@+id/bg_icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_marginStart="@dimen/margin_14_dp"
+        android:layout_marginEnd="35dp"
+        android:visibility="gone"
+        android:id="@+id/ln_birthday"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bg_icon"
+        android:weightSum="3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_weight="1"
+            android:gravity="start"
+            android:textSize="@dimen/margin_16_dp"
+            style="@style/roboto_regular"
+            android:text="Ngày"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:gravity="center"
+            android:layout_weight="1"
+            style="@style/roboto_regular"
+            android:textSize="@dimen/margin_16_dp"
+            android:text="Tháng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:gravity="end"
+            android:layout_weight="1"
+            style="@style/roboto_regular"
+            android:textSize="@dimen/margin_16_dp"
+            android:text="Năm sinh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:src="@drawable/ic_show_password_login"
+        android:visibility="gone"
+        android:padding="@dimen/margin_8_dp"
+        android:layout_marginEnd="5dp"
+        android:tint="@color/color_icon_password"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/ic_show_hide_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

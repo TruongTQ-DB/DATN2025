@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#00000000"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_change_avatar"
+            style="@style/roboto_medium_16dp_fontWeight_500"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_bottom_bar"
+            android:paddingVertical="@dimen/margin_18_dp"
+            android:text="@string/dialog_option_title"
+            android:textAlignment="center" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_bg_pick_camera" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btn_camera"
+            style="@style/roboto_bold_16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingVertical="@dimen/margin_16_dp"
+            android:textSize="18dp"
+            android:text="@string/dialog_take_photo"
+            android:textAlignment="center"
+            android:textColor="@color/color_text_pick_camera" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_bg_pick_camera" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btn_gallery"
+            style="@style/roboto_bold_16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingVertical="@dimen/margin_16_dp"
+            android:textSize="18dp"
+            android:text="@string/dialog_choso_picture"
+            android:textAlignment="center"
+            android:textColor="@color/color_text_pick_camera" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_8_dp"
+            android:background="@color/color_bg_pick_camera" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btn_cancel"
+            style="@style/roboto_bold_16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingVertical="@dimen/margin_16_dp"
+            android:textSize="18dp"
+            android:text="@string/dialog_cancel"
+            android:textAlignment="center"
+            android:textColor="#0957DF" />
+    </LinearLayout>
+
+</RelativeLayout>

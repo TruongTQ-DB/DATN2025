@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9F9F9">
+
+    <com.graduate.datn.custom.view.CustomHeaderView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:leftDrawable="@drawable/ic_bg_back_doctor"
+        app:title="Thông tin khách hàng" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsv_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_0_dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/margin_16_dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_avatar"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_horizontal"
+                    app:cardCornerRadius="100dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_avatar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/avatar_circle" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="@dimen/width_0_dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_12_dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/cv_avatar"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        style="@style/roboto_medium_16"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:textColor="@color/color_591DA3"
+                        android:textSize="@dimen/margin_20_dp" />
+
+                    <TextView
+                        android:id="@+id/tv_birthday"
+                        style="@style/roboto_regular_14dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_4_dp"
+                        android:maxLines="2" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/ll_call_phone"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:layout_marginTop="@dimen/margin_20_dp"
+                android:layout_marginHorizontal="@dimen/margin_16_dp"
+                android:background="@drawable/bg_add_call"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/margin_16_dp"
+                app:layout_constraintTop_toBottomOf="@id/header">
+
+                <ImageView
+                    android:layout_width="@dimen/margin_20_dp"
+                    android:layout_height="@dimen/margin_20_dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/margin_12_dp"
+                    android:src="@drawable/icon_phone"
+                    app:tint="@color/color_call" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/roboto_bold_16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="5dp"
+                    android:gravity="center"
+                    android:text="Điện thoại"
+                    android:textColor="@color/color_call"
+                    android:textSize="@dimen/margin_18_dp" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <TextView
+                style="@style/roboto_bold_14dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20_dp"
+                android:paddingHorizontal="@dimen/margin_16_dp"
+                android:text="Thông tin người dùng:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/margin_20_dp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="@dimen/margin_16_dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_information"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_9_dp"
+                    android:orientation="vertical"
+                    app:cardCornerRadius="@dimen/radius_12_dp"
+                    app:cardElevation="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="17.5dp">
+
+                        <LinearLayout
+                            android:id="@+id/ll_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                style="@style/roboto_bold_14dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Email"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/margin_18_dp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_email"
+                                style="@style/roboto_regular_16dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_6_dp"
+                                android:ellipsize="end"
+                                android:maxLines="2"
+                                tools:text="Tran Quang Truong" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_22_dp"
+                            android:orientation="vertical"
+                            app:layout_constraintTop_toBottomOf="@+id/ll_email">
+
+                            <TextView
+                                style="@style/roboto_bold_14dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Số điện thoại"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/margin_18_dp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_phone"
+                                style="@style/roboto_regular_16dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_6_dp"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                tools:text="Tran Quang Truong" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_sex"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_22_dp"
+                            android:orientation="vertical"
+                            app:layout_constraintTop_toBottomOf="@+id/ll_phone">
+
+                            <TextView
+                                style="@style/roboto_bold_14dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Giới tính"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/margin_18_dp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_sex"
+                                style="@style/roboto_regular_16dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_6_dp"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                tools:text="Tran Quang Truong" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_22_dp"
+                            android:orientation="vertical"
+                            app:layout_constraintTop_toBottomOf="@+id/ll_sex">
+
+                            <TextView
+                                style="@style/roboto_bold_14dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Địa chỉ"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/margin_18_dp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_address"
+                                style="@style/roboto_regular_16dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_6_dp"
+                                android:ellipsize="end"
+                                android:maxLines="3"
+                                tools:text="Tran Quang Truong" />
+
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20_dp"
+                android:layout_marginBottom="@dimen/margin_12_dp"
+                android:paddingHorizontal="@dimen/margin_16_dp">
+
+                <TextView
+                    style="@style/roboto_bold_14dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Lịch sử đặt lịch"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/margin_20_dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_all"
+                    style="@style/roboto_regular_16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/str_all"
+                    android:textColor="#0957DF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.graduate.datn.base.adapter.BaseRecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:layout_marginTop="8dp"
+                android:visibility="visible"
+                tools:listitem="@layout/item_docter_name" />
+
+            <TextView
+                android:id="@+id/tv_show_message_not_result"
+                style="@style/roboto_bold_14dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="46dp"
+                android:layout_marginBottom="80dp"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/margin_16_dp"
+                android:text="Chưa có lịch cắt tóc!"
+                android:textColor="@color/color_ACAAAF"
+                android:textSize="@dimen/margin_18_dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

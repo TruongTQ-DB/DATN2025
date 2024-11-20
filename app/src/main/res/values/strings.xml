@@ -1,0 +1,334 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="error_place_holder">Error Happend.Try again!</string>
+    <string name="timeout_error">Quá thời gian kết nối máy chủ</string>
+    <string name="lable_forget_password">Quên / Đổi mật khẩu</string>
+    <string name="lable_register_account"><u>Đăng ký tài khoản</u></string>
+    <string name="lable_title">Sức khoẻ trong tầm tay</string>
+    <string name="lable_title_another_login">Hoặc đăng nhập qua:</string>
+    <string name="btn_login_with_zalo">Đăng nhập với Zalo</string>
+    <string name="btn_login_with_facebook">Đăng nhập với Facebook</string>
+    <string name="btn_login_with_Apple">Đăng nhập với Apple</string>
+    <string name="btn_login_with_google">Đăng nhập với Google</string>
+    <string name="lable_account">demo1@example.com</string>
+    <string name="btn_login">ĐĂNG NHẬP</string>
+    <string name="lable_password">Abcd!234</string>
+    <string name="str_login_validate_user_name">Bạn chưa nhập tài khoản</string>
+    <string name="error_400">Có lỗi xãy ra!</string>
+    <string name="error_422">HTTP 422 Unprocessable Content</string>
+    <string name="str_login_error_400">Đăng nhập thất bại. Vui lòng kiểm tra thông tin đăng nhập!</string>
+    <string name="str_login_error_422">Email hoặc số điện thoại không hơp lệ.</string>
+    <string name="str_empty_username">Bạn chưa nhập tài khoản</string>
+    <integer name="activity_anim_duration">300</integer>
+    <integer name="activity_anim_duration_out">500</integer>
+    <string name="str_empty_password">Bạn chưa nhập password</string>
+    <string name="str_empty_all">Vui lòng nhập tài khoản và mật khẩu</string>
+    <string name="str_login_success">Đăng nhập thành công</string>
+    <string name="error_receiving_api">Error Receiving Api</string>
+    <string name="disconect">Không có kêt nối</string>
+    <string name="btn_header_left_top">Hồ sơ bệnh án</string>
+    <string name="btn_header_right_top">Liên hệ bác sĩ tư vấn</string>
+    <string name="btn_header_left_bottom">Cập nhật kết quả xét nghiệp</string>
+    <string name="btn_header_right_bottom">Đặt lịch khám</string>
+    <string name="tab_home">Trang chủ</string>
+    <string name="title_patient">Khám bệnh</string>
+    <string name="title_test">Xét nghiệm</string>
+    <string name="title_brief">Hồ sơ</string>
+    <string name="title_account">Tài khoản</string>
+    <string name="lable_name">Nguyễn Thu Hương</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lable_infectious_hepatitis">Truyền nhiễm - Viêm gan</string>
+    <string name="label_endocrine_diabetes">Nội tiết - Đái tháo đường</string>
+    <string name="label_heart_blood_pressure">Tim mạch - Huyết áp</string>
+    <string name="label_tumor">Ung bướu</string>
+    <string name="label_urinary_kidney">Thận - Tiết niệu</string>
+    <string name="label_digestion">Tiêu hoá</string>
+    <string name="label_musculoskeletal">Cơ xương khớp</string>
+    <string name="label_Respiratory_copd">Hô hấp - COPD</string>
+    <string name="lable_ear_nose_throat">Tai - Mủi - Họng</string>
+    <string name="label_dentomaxillofacial">Răng - Hàm - Mặt</string>
+    <string name="label_surgery">Ngoại khoa</string>
+    <string name="title_highlights">Nổi bật</string>
+    <string name="lable_notification">2</string>
+    <string name="lable_specialist">Chuyên khoa</string>
+    <string name="lable_service">Dịch vụ</string>
+    <string name="lable_kham_suc_khoe_co_quan">Khám sức khoẻ cơ quan</string>
+    <string name="lable_cham_soc_y_te">Chăm sóc y tế tại nhà</string>
+    <string name="lable_lay_mau">Lấy máu tại nhà</string>
+    <string name="lable_tam_soat_ung_thu">Tầm soát ung thư</string>
+    <string name="lable_kham_tong_quat">Khám tổng quát</string>
+    <string name="dialog_title_my_pref">my_pref_login</string>
+    <string name="dialog_title_key_pref">Save_pref_login</string>
+    <string name="lable_Logged">Chào mừng trở lại</string>
+    <string name="tab_status_tablayout">status</string>
+    <string name="lable_text_kqxt_mau">KQXT Máu</string>
+    <string name="lable_test_file">File đính kèm</string>
+    <string name="lable_test_image">Ảnh</string>
+    <string name="lable_delete">Xoá</string>
+    <string name="text_ThS">ThS</string>
+    <string name="text_TS">TS</string>
+    <string name="settext_tien_si">Tiến sỹ</string>
+    <string name="settext_thac_si">Thạc sỹ</string>
+    <string name="lable_cm">cm</string>
+    <string name="lable_kg">kg</string>
+    <string name="btn_update">Cập nhật</string>
+    <string name="hint_diagnostic">Chuẩn đoán</string>
+    <string name="hint_blood">Nhóm máu</string>
+    <string name="weight">Cân nặng</string>
+    <string name="hint_height">Chiều cao</string>
+    <string name="lable_address">Tầng 4, Toà nhà H10, Số 2 ngõ 475, Thanh Xuân, Hà Nội</string>
+    <string name="lable_male">Nam</string>
+    <string name="lable_birthday">24 / 04 / 1986</string>
+    <string name="lable_female">Nữ</string>
+    <string name="lable_other">Khác</string>
+    <string name="title_health">Thông tin sức khoẻ</string>
+    <string name="title_individual">Thông tin cá nhân</string>
+    <string name="title_create_profile">Tạo Hồ sơ</string>
+    <string name="lable_phone">0979 017 899</string>
+    <string name="lable_add_new">Tạo mới</string>
+    <string name="medical_examination_history">Lịch sử khám bệnh</string>
+    <string name="lable_day">30 / 11 / 2001</string>
+    <string name="lable_list_patient">Danh sách lịch khám</string>
+    <string name="lable_blood_group">Nhóm máu</string>
+    <string name="lable_offline">Trực tiếp</string>
+    <string name="lable_online">Trực tuyến</string>
+    <string name="lable_title_account">Tài khoản</string>
+    <string name="lable_create_account">Thiết lập tài khoản</string>
+    <string name="lable_history_account">Lịch sử hoạt đông</string>
+    <string name="label_create_app">Thiết lập ứng dụng</string>
+    <string name="label_logout">Đăng xuất</string>
+    <string name="label_canceled">Đã huỷ</string>
+    <string name="lable_address_user">ĐC: Toà H10, 477 Nguyễn Trãi</string>
+    <string name="label_detailed_phone">ĐT: 0979 017 899</string>
+    <string name="label_dortor_name">Bsi. Thân Mạnh Hùng</string>
+    <string name="label_doctor_service">Phó trưởng khoa cấp cứu</string>
+    <string name="label_detailed_time">11:00 - 11:30</string>
+    <string name="label_detailed_note"><u>Ghi chú:</u></string>
+    <string name="see_medical_examination_results">Xem kết quả khám bênh</string>
+    <string name="label_detailed_medical_examination">Chi tiết lịch đã khám</string>
+    <string name="label_update_medical_exammination">CẬP NHẬT KQKB</string>
+    <string name="label_update_if_any">cập nhật KQXN, chụp chiếu (nếu có)</string>
+    <string name="label_update_medical_examination">Huỷ đặt lịch khám</string>
+    <string name="label_order_medical_examination">Chi tiết đăt lịch khám</string>
+    <string name="label_login">MEMBER LOGIN</string>
+    <string name="label_forgot_password">Quên mật khẩu</string>
+    <string-array name="Spinner">
+        <item>Việt Nam</item>
+        <item>Ấn Độ</item>
+        <item>Hoa Kỳ</item>
+        <item>Indonesia</item>
+        <item>Trung Quốc</item>
+    </string-array>
+
+    <!--Login-->
+    <string name="btn_login_title">Đăng nhập</string>
+    <string name="login_username_hint">Email</string>
+    <string name="login_password_hint">Mật khẩu</string>
+    <string name="login_validate_user_name">Vui lòng nhập Email!</string>
+    <string name="login_validate_password">Vui lòng nhập Mật khẩu!</string>
+    <string name="login_successful">Đăng nhập thành công!</string>
+    <string name="login_failed">Đăng nhập thất bại!</string>
+    <string name="account_logout_success">Đăng xuất thành công!</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="remember_me">Remember me</string>
+    <string name="sign_in">Sign in</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="request_select_people">Tìm kiếm</string>
+    <string name="login_validate_user_name_not_email">Vui lòng nhập đúng định dạng email!</string>
+
+    <!--Login Firebase-->
+    <string name="tab_address" tools:ignore="ExtraTranslation">Địa điểm</string>
+    <string name="tab_barber_name" tools:ignore="ExtraTranslation">Thợ cắt</string>
+    <string name="tab_account" tools:ignore="ExtraTranslation">Tài khoản</string>
+    <string name="tab_service" tools:ignore="ExtraTranslation">Dịch vụ</string>
+    <string name="tab_customer" tools:ignore="ExtraTranslation">Bệnh nhân</string>
+<!--    <string name="facebook_app_id">1074123183570919</string>-->
+<!--    <string name="fb_login_protocol_scheme">fb1074123183570919</string>-->
+<!--    <string name="facebook_client_token">3f59645bea900e41af477386d1a08b96</string>-->
+    <string name="facebook_app_id">554349877201799</string>
+    <string name="fb_login_protocol_scheme">fb554349877201799</string>
+    <string name="facebook_client_token">0ec6658987bcddfaaa9d4918f91e063e</string>
+sao rồi em, đang nhap dc ko, em đang nhập vs tài khoản nào thée
+    <string name="web_client_token_id">298808374975-0k482n9imogbp9sflh1kt0f484atus6b.apps.googleusercontent.com</string>
+
+    <!--register-->
+    <string name="register_password_hint"><![CDATA[Mật khẩu<br/><font color=\'#DC2220\'><i>(ít nhất 6 ký tự cả chữ hoa,chữ thường và số)</i></font>]]></string>
+    <string name="register_input_email">Vui lòng nhập Email!</string>
+    <string name="register_input_birthday">Chọn ngày sinh</string>
+    <string name="register_input_email_max_length">Vui lòng nhập Email lớn nhất 100 ký tự!</string>
+    <string name="register_input_email_not_email">Vui lòng nhập đúng định dạng email!</string>
+    <string name="register_input_password">Vui lòng nhập mật khẩu!</string>
+    <string name="register_input_password_max_length">Vui lòng nhập Mật khẩu lớn nhất 50 ký tự!</string>
+    <string name="register_input_password_min_length">Vui lòng nhập Mật khẩu ít nhất 6 ký tự!</string>
+    <string name="register_input_password_not_password">Vui lòng nhập đúng định dạng mật khẩu!</string>
+    <string name="register_input_confirm_password">Vui lòng nhập lại mật khẩu!</string>
+    <string name="register_input_confirm_password_not_match">Vui lòng nhập lại mật khẩu khớp với mật khẩu!</string>
+    <string name="register_input_name">Vui lòng nhập họ và tên!</string>
+    <string name="register_input_name_max_length">Vui lòng nhập Mật khẩu lớn nhất 255 ký tự!</string>
+    <string name="register_chose_birthday">Vui lòng chọn ngày sinh!</string>
+    <string name="register_chose_gender">Vui lòng chọn giới tính!</string>
+    <string name="register_input_phone">Vui lòng nhập số điện thoại!</string>
+    <string name="register_input_email_not_phone">Vui lòng nhập đúng định dạng số điện thoại!</string>
+    <string name="register_input_address">Vui lòng nhập địa chỉ!</string>
+    <string name="register_input_address_max_length">Vui lòng nhập địa chỉ lớn nhất 255 ký tự!</string>
+
+    <!--list address-->
+    <string name="list_address_title">Quản lý Phòng khám</string>
+    <string name="list_address_add">Tạo mới</string>
+    <string name="list_address_null">Chưa có địa chỉ Phòng khám</string>
+
+    <!--add address-->
+    <string name="add_address_title">Thêm Phòng khám</string>
+    <string name="add_address_name">Nhập tên Phòng khám</string>
+    <string name="add_address_address">Nhập Địa chỉ</string>
+    <string name="add_address_no_name">Vui lòng nhập tên Phòng khám</string>
+    <string name="add_address_no_address">Vui lòng nhập địa chỉ!</string>
+    <string name="add_address_no_iamge">Vui lòng Chọn/Chup ảnh đại diện!</string>
+
+    <!--dialog picture-->
+    <string name="dialog_cancel">Cancel</string>
+    <string name="dialog_choso_picture">Chọn ảnh</string>
+    <string name="dialog_option_title">Hình thức ảnh</string>
+    <string name="dialog_take_photo">Chụp ảnh</string>
+    <string name="str_cancel">Hủy</string>
+
+    <!--list address-->
+    <string name="list_barber_name_title">Danh sách bác sĩ</string>
+    <string name="list_barber_name_add">Tạo mới</string>
+    <string name="list_barber_name_null">Chưa có địa chỉ Phòng khám</string>
+
+
+    <!--list service-->
+    <string name="list_service_title">Danh sách Dịch vụ</string>
+    <string name="list_service_add">Tạo mới</string>
+    <string name="list_service_null">Không có dữ liệu!</string>
+
+    <!--add service-->
+    <string name="add_service_title">Thêm Khoa khám</string>
+    <string name="add_service_name">Tên dịch vụ</string>
+    <string name="add_service_no_name">Vui lòng nhập tên dịch vụ!</string>
+    <string name="add_service_no_image">Vui lòng Chọn/Chup ảnh!</string>
+    <string name="add_service_no_address">Vui lòng chọn địa điểm!</string>
+    <string name="add_service_no_type_service">Vui lòng chọn Khoa khám!</string>
+    <string name="add_service_complete">Hoàn tất</string>
+
+    <!--list optional service-->
+    <string name="list_optional_service_title">Danh sách Dịch vụ</string>
+    <string name="list_optional_service_add">Tạo mới</string>
+    <string name="list_optional_service_null">Chưa có Dịch vụ</string>
+
+    <!--custom_dialog_wheel_wicker-->
+    <string name="dialog_wheel_wicker_cancel">Huỷ</string>
+    <string name="dialog_wheel_wicker_ok">Chọn</string>
+
+    <!--add optional service-->
+    <string name="add_container_service_title">Quản lý Khoa khám</string>
+    <string name="add_optional_service_title">Thêm mới Dịch vụ</string>
+    <string name="add_optional_service_name">Nhập tên Dịch vụ</string>
+    <string name="add_optional_service_choose_address">Chọn cơ sở phòng khám</string>
+    <string name="add_optional_service_choose_service">Chọn Khoa khám</string>
+    <string name="add_optional_service_choose_optional_service">Chọn Dịch vụ</string>
+    <string name="add_optional_service_no_name">Vui lòng nhập tên Dịch vụ!</string>
+    <string name="add_optional_service_no_service">Vui lòng chọn khoa khám!</string>
+    <string name="add_optional_service_no_address">Vui lòng chọn Địa điểm!</string>
+    <string name="add_optional_service_no_image">Vui lòng Chọn/Chup ảnh khoa khám!</string>
+    <string name="add_optional_service_complete">Hoàn tất</string>
+
+    <!--container_service-->
+    <string name="container_service_service">Dịch vụ</string>
+    <string name="container_service_optional_service">Dịch vụ tuỳ chọn</string>
+    <string name="format_month">Tháng</string>
+
+    <!--container_user_management-->
+    <string name="container_user_management_title">Quản lý</string>
+    <string name="container_user_management_customer">Quản lý Khách hàng</string>
+    <string name="container_user_management_barber_name">Quản lý bác sĩ</string>
+    <string name="container_user_management_shampooist">Quản lý Thợ gội đầu</string>
+
+    <!--list customer-->
+    <string name="list_customer_title">Danh sách Khách hàng</string>
+    <string name="list_customer_add">Tạo mới</string>
+    <string name="list_customer_null">Chưa có Khách hàng.</string>
+
+    <!--list customer-->
+    <string name="list_hair_shampooer_title">Danh sách Thợ gội đầu</string>
+    <string name="list_hair_shampooer_add">Tạo mới</string>
+    <string name="list_hair_shampooer_null">Chưa có Thợ gội đầu.</string>
+
+    <!--add user -->
+    <string name="input_email">Vui lòng nhập Email!</string>
+    <string name="input_password">Vui lòng nhập Mật khẩu!</string>
+    <string name="confirm_password">Vui lòng nhập lại Mật khẩu!</string>
+    <string name="input_name">Vui lòng nhập Họ và tên!</string>
+    <string name="input_phone">Vui lòng nhập Số điện thoại!</string>
+    <string name="chose_birthday">Vui lòng chọn Ngày sinh!</string>
+    <string name="chose_gender">Vui lòng chọn Giới tính!</string>
+    <string name="input_address">Vui lòng nhập Địa chỉ!</string>
+    <string name="chose_cli_address">Vui lòng chọn Phòng khám!</string>
+    <string name="chose_type_service">Vui lòng chọn Loại Dịch vụ!</string>
+    <string name="chose_service">Vui lòng chọn Dịch vụ!</string>
+    <string name="chose_optional_service">Vui lòng chọn Dịch vụ tuỳ chọn!</string>
+    <string name="email_max_length">Vui lòng nhập Email lớn nhất 100 ký tự!</string>
+    <string name="email_not_email">Vui lòng nhập đúng định dạng Email!</string>
+    <string name="password_max_length">Vui lòng nhập Mật khẩu lớn nhất 50 ký tự!</string>
+    <string name="password_min_length">Vui lòng nhập Mật khẩu ít nhất 6 ký tự!</string>
+    <string name="password_not_password">Vui lòng nhập đúng định dạng Mật khẩu!</string>
+    <string name="confirm_password_not_match">Vui lòng nhập lại mật khẩu khớp với Mật khẩu!</string>
+    <string name="name_max_length">Vui lòng nhập Mật khẩu lớn nhất 255 ký tự!</string>
+    <string name="email_not_phone">Vui lòng nhập đúng định dạng Số điện thoại!</string>
+    <string name="address_max_length">Vui lòng nhập Địa chỉ lớn nhất 255 ký tự!</string>
+    <string name="add_docter_name">Thêm Bác sĩ</string>
+    <string name="str_time_schedule">{0} - {1}</string>
+    <string name="make_an_appointment_day_format">ngày {0} tháng {1}, {2}</string>
+    <string name="make_an_appointment_hour">Chọn giờ</string>
+    <string name="scheme">cutting.com</string>
+
+    <string name="str_payment_00">Giao dịch thanh toán thành công</string>
+    <string name="str_payment_01">Giao dịch chưa hoàn tất</string>
+    <string name="str_payment_02">Giao dịch bị lỗi</string>
+    <string name="str_payment_04">Giao dịch đảo (Khách hàng đã bị trừ tiền tại Ngân hàng nhưng GD chưa thành công ở VNPAY)</string>
+    <string name="str_payment_05">VNPAY đang xử lý giao dịch này (GD hoàn tiền)</string>
+    <string name="str_payment_06">VNPAY đã gửi yêu cầu hoàn tiền sang Ngân hàng (GD hoàn tiền)</string>
+    <string name="str_payment_07">Giao dịch bị nghi ngờ gian lận</string>
+    <string name="str_payment_09">GD Hoàn trả bị từ chối</string>
+    <string name="booking_successful_back_home"><u>Quay về trang chủ</u></string>
+
+    <string name="str_optional_service_name">Tên Dịch vụ tuỳ chon <font color='#0957DF'>*</font></string>
+    <string name="str_optional_service_price">Giá tiền <font color='#0957DF'>*</font></string>
+    <string name="str_optional_service_booking_apointment">Phòng khám <font color='#0957DF'>*</font></string>
+    <string name="str_optional_service_service">khoa khám <font color='#0957DF'>*</font></string>
+    <string name="str_service_name">Tên Khoa <font color='#0957DF'>*</font></string>
+    <string name="str_service_barber_shop">Phòng khám <font color='#0957DF'>*</font></string>
+    <string name="str_service_barber_shop_no_star">Phòng khám </string>
+    <string name="str_address_name">Tên Phòng Khám <font color='#0957DF'>*</font></string>
+    <string name="str_address_address">Địa chỉ <font color='#0957DF'>*</font></string>
+
+    <string name="str_add_user_email">Email <font color='#0957DF'>*</font></string>
+    <string name="str_add_user_password_">Mật khẩu <font color='#0957DF'>*</font></string>
+    <string name="str_add_user_password">Xác nhân mật khẩu <font color='#0957DF'>*</font></string>
+    <string name="str_add_user_name">Họ và tên <font color='#0957DF'>*</font></string>
+    <string name="str_add_detail_name">Chi tiết <font color='#0957DF'>*</font></string>
+    <string name="str_add_user_phone">Số điện thoại <font color='#0957DF'>*</font></string>
+    <string name="str_add_user_gander">Giới tính <font color='#0957DF'>*</font></string>
+    <string name="str_add_user_address">Địa chỉ <font color='#0957DF'>*</font></string>
+    <string name="str_add_user_birthday">Ngày sinh <font color='#0957DF'>*</font></string>
+    <string name="str_add_user_choose_address">Phòng khám <font color='#0957DF'>*</font></string>
+    <string name="str_add_user_choose_service">Khoa khám<font color='#0957DF'>*</font></string>
+    <string name="str_add_user_choose_optional_service">Dịch vụ <font color='#0957DF'>*</font></string>
+
+    <string name="str_the_new_tittle">Tiêu đề<font color='#0957DF'>*</font></string>
+    <string name="str_the_new_content">Nội dung<font color='#0957DF'>*</font></string>
+
+    <string name="str_all"><u>Tất cả</u></string>
+    <string name="str_only_day"><u>Theo ngày</u></string>
+    <string name="str_register_login"><u>Đăng ký tài khoản</u></string>
+
+    <string name="str_tu_van">Tư vấn trực tuyến</string>
+    <string name="str_appointment_schedule">Đặt lịch khám bệnh</string>
+        <string name="str_tiem_chung">Đặt lịch tiêm chủng</string>
+    <string name="str_goi_kham">Gói khám sức khỏe</string>
+    <string name="str_xet_nghiem">Đặt lịch xét nghiệm</string>
+    <string name="str_kham_tai_nha">Gói khám tại nhà</string>
+
+</resources>

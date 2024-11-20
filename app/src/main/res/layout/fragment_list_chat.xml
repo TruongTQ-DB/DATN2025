@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.graduate.datn.custom.view.CustomHeaderView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:leftDrawable="@drawable/ic_bg_back_doctor"
+        app:title="Tin nhắn" />
+
+    <EditText
+        android:id="@+id/input_search"
+        style="@style/roboto_medium_16dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_40_dp"
+        android:layout_marginHorizontal="@dimen/margin_16_dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/bg_border_input_login"
+        android:drawableLeft="@drawable/ic_search"
+        android:drawablePadding="@dimen/margin_12_dp"
+        android:gravity="center_vertical"
+        android:hint="Cuộc hội thoại"
+        android:paddingStart="@dimen/margin_14_dp"
+        android:textColor="@color/color_text_title"
+        android:textColorHint="@color/color_hint_text_search"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
+
+    <TextView
+        android:id="@+id/tv_show_message_not_result"
+        style="@style/roboto_bold_14dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
+        android:gravity="center"
+        android:text="Không có tin nhắn!"
+        android:textColor="@color/color_ACAAAF"
+        android:textSize="@dimen/margin_18_dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_search" />
+
+    <com.graduate.datn.base.adapter.BaseRecyclerView
+        android:id="@+id/rcv_list_chat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_search"
+        tools:listitem="@layout/item_address" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

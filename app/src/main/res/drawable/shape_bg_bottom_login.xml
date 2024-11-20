@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:startColor="@color/login_teel1"
+        android:endColor="@color/login_teel2"
+        android:type="linear"
+        android:angle="90"/>
+    <corners
+        android:radius="22.5dp"/>
+</shape>
