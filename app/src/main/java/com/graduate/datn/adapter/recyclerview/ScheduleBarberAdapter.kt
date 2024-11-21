@@ -35,7 +35,7 @@ class ScheduleBarberAdapter(context: Context) : EndlessLoadingRecyclerViewAdapte
                     1 -> {
                         tv_status.background =
                             context.getDrawable(R.drawable.bg_schedule_status_done)
-                        "Đã cắt"
+                        "Đã khám"
                     }
                     2 -> {
                         tv_status.background =

@@ -2,7 +2,7 @@ package com.graduate.datn.entity.request
 
 
 data class AddServiceRequest(
-    val barberShopAddressId: String,
+    val clinicShopAddressId: String,
 
     val addressName: String,
 

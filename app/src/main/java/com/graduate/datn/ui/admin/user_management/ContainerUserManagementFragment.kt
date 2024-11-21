@@ -15,12 +15,12 @@ import com.graduate.datn.ui.admin.add_docter_name.AddDocterNameFragment
 import com.graduate.datn.ui.admin.list_work_schedule.DateToWorkItem
 import com.graduate.datn.ui.admin.work_schedule.CreateWorkScheduleFragment
 import com.graduate.datn.ui.admin.work_schedule_detail.WorkScheduleDetailsFragment
-import com.graduate.datn.utils.BundleKey.KEY_DATA_UPDATE_BARBER
-import com.graduate.datn.utils.BundleKey.KEY_IS_CREATE_BARBER
-import com.graduate.datn.utils.BundleKey.KEY_IS_UPDATE_BARBER
+import com.graduate.datn.utils.BundleKey.KEY_DATA_UPDATE_DOCTER
+import com.graduate.datn.utils.BundleKey.KEY_IS_CREATE_DOCTER
+import com.graduate.datn.utils.BundleKey.KEY_IS_UPDATE_DOCTER
 import com.graduate.datn.utils.BundleKey.KEY_WORD_SCHEDULE_DETAIL
 import com.graduate.datn.utils.Constant
-import com.graduate.datn.utils.Constant.TYPE_ACCOUNT_BARBER_NAME
+import com.graduate.datn.utils.Constant.TYPE_ACCOUNT_DOCTER_NAME
 import com.graduate.datn.utils.Constant.TYPE_ACCOUNT_CUSTOMER
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
@@ -87,9 +87,9 @@ class ContainerUserManagementFragment : BaseFragment() {
                                     toast(R.string.error_400)
                                 }
                         }
-                        TYPE_BARBER -> {
+                        TYPE_DOCTER -> {
                             userCollection
-                                .whereEqualTo("account", Constant.TYPE_ACCOUNT_BARBER_NAME)
+                                .whereEqualTo("account", Constant.TYPE_ACCOUNT_DOCTER_NAME)
                                 .orderBy("name").startAfter(viewModel.lastVisibleDocument!!)
                                 .limit(20)
                                 .get().addOnSuccessListener { documents ->
@@ -183,7 +183,7 @@ class ContainerUserManagementFragment : BaseFragment() {
         tab_layout.onClickMiddle = {
             tv_add.text = "Thêm Bác Sĩ"
             cl_show_calendar.gone()
-            viewModel.tabLayout = TYPE_BARBER
+            viewModel.tabLayout = TYPE_DOCTER
             refreshData()
             tv_search_all.gone()
         }
@@ -217,12 +217,12 @@ class ContainerUserManagementFragment : BaseFragment() {
             when (viewModel.tabLayout) {
                 TYPE_CUSTOMER -> {
                     getVC().addFragment(AddDocterNameFragment::class.java, Bundle().apply {
-                        putBoolean(KEY_IS_CREATE_BARBER, false)
+                        putBoolean(KEY_IS_CREATE_DOCTER, false)
                     })
                 }
-                TYPE_BARBER -> {
+                TYPE_DOCTER -> {
                     getVC().addFragment(AddDocterNameFragment::class.java, Bundle().apply {
-                        putBoolean(KEY_IS_CREATE_BARBER, true)
+                        putBoolean(KEY_IS_CREATE_DOCTER, true)
                     })
                 }
                 TYPE_WORK_SCHEDULE -> {
@@ -235,13 +235,13 @@ class ContainerUserManagementFragment : BaseFragment() {
             if (data is User) {
                 if (data.account == TYPE_ACCOUNT_CUSTOMER) {
                     getVC().addFragment(AddDocterNameFragment::class.java, Bundle().apply {
-                        putBoolean(KEY_IS_UPDATE_BARBER, false)
-                        putSerializable(KEY_DATA_UPDATE_BARBER, data)
+                        putBoolean(KEY_IS_UPDATE_DOCTER, false)
+                        putSerializable(KEY_DATA_UPDATE_DOCTER, data)
                     })
-                } else if (data.account == TYPE_ACCOUNT_BARBER_NAME) {
+                } else if (data.account == TYPE_ACCOUNT_DOCTER_NAME) {
                     getVC().addFragment(AddDocterNameFragment::class.java, Bundle().apply {
-                        putBoolean(KEY_IS_UPDATE_BARBER, true)
-                        putSerializable(KEY_DATA_UPDATE_BARBER, data)
+                        putBoolean(KEY_IS_UPDATE_DOCTER, true)
+                        putSerializable(KEY_DATA_UPDATE_DOCTER, data)
                     })
                 }
             } else if (data is DateToWorkItem) {
@@ -278,9 +278,9 @@ class ContainerUserManagementFragment : BaseFragment() {
                         toast(R.string.error_400)
                     }
             }
-            TYPE_BARBER -> {
+            TYPE_DOCTER -> {
                 userCollection
-                    .whereEqualTo("account", Constant.TYPE_ACCOUNT_BARBER_NAME)
+                    .whereEqualTo("account", Constant.TYPE_ACCOUNT_DOCTER_NAME)
                     .orderBy("name").limit(20).get()
                     .addOnSuccessListener { documents ->
                         hideLoading()
@@ -346,7 +346,7 @@ class ContainerUserManagementFragment : BaseFragment() {
 
     companion object {
         const val TYPE_CUSTOMER = 1
-        const val TYPE_BARBER = 2
+        const val TYPE_DOCTER = 2
         const val TYPE_WORK_SCHEDULE = 3
     }
 

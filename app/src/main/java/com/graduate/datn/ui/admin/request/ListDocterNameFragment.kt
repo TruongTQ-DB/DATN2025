@@ -14,11 +14,11 @@ import com.graduate.datn.extension.visible
 import com.graduate.datn.ui.admin.add_docter_name.AddDocterNameFragment
 import com.graduate.datn.ui.barber_name.RequestViewModel
 import com.graduate.datn.utils.Constant
-import com.graduate.datn.utils.Constant.TYPE_ACCOUNT_BARBER_NAME
+import com.graduate.datn.utils.Constant.TYPE_ACCOUNT_DOCTER_NAME
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.fragment_list_docter_name.*
 
-class ListBarberNameFragment : BaseFragment() {
+class ListDocterNameFragment : BaseFragment() {
     private val viewModel: RequestViewModel by activityViewModels()
     private val mAdapter: DocterNameAdapter by lazy { DocterNameAdapter(requireContext()) }
 
@@ -56,7 +56,7 @@ class ListBarberNameFragment : BaseFragment() {
                     mAdapter.showLoadingItem(true)
                     showLoading()
                     userCollection
-                        .whereEqualTo("account", TYPE_ACCOUNT_BARBER_NAME)
+                        .whereEqualTo("account", TYPE_ACCOUNT_DOCTER_NAME)
                         .orderBy("name")
                         .startAfter(viewModel.lastVisibleDocument!!)
                         .limit(20)
@@ -102,7 +102,7 @@ class ListBarberNameFragment : BaseFragment() {
         showLoading()
         mAdapter.clear()
         userCollection
-            .whereEqualTo("account", TYPE_ACCOUNT_BARBER_NAME)
+            .whereEqualTo("account", TYPE_ACCOUNT_DOCTER_NAME)
             .orderBy("name")
             .limit(20).get()
             .addOnSuccessListener { documents ->

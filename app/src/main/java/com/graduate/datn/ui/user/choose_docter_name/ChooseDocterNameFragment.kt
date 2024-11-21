@@ -16,7 +16,7 @@ import com.graduate.datn.ui.user.make_appointment_time.MakeAppointmentTimeFragme
 import com.graduate.datn.utils.BundleKey
 import com.graduate.datn.utils.Constant
 import com.graduate.datn.utils.Constant.TABLE_USER
-import com.graduate.datn.utils.Constant.TYPE_ACCOUNT_BARBER_NAME
+import com.graduate.datn.utils.Constant.TYPE_ACCOUNT_DOCTER_NAME
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.firestore.FirebaseFirestore
 import com.graduate.datn.adapter.recyclerview.DocterListNameAdapter
@@ -91,8 +91,8 @@ class ChooseDocterNameFragment : BaseFragment() {
                     viewModel.serviceId?.let {
                         viewModel.optionalServiceId?.let { it1 ->
                             userCollection
-                                .whereEqualTo("account", TYPE_ACCOUNT_BARBER_NAME)
-                                .whereEqualTo("barberShopAddressId", viewModel.addressId)
+                                .whereEqualTo("account", TYPE_ACCOUNT_DOCTER_NAME)
+                                .whereEqualTo("clinicShopAddressId", viewModel.addressId)
                                 .whereArrayContains("optionalService",
                                     mapOf(
                                         "disable" to false,
@@ -158,8 +158,8 @@ class ChooseDocterNameFragment : BaseFragment() {
         viewModel.serviceId?.let {
             viewModel.optionalServiceId?.let { it1 ->
                 userCollection
-                    .whereEqualTo("account", TYPE_ACCOUNT_BARBER_NAME)
-                    .whereEqualTo("barberShopAddressId", viewModel.addressId)
+                    .whereEqualTo("account", TYPE_ACCOUNT_DOCTER_NAME)
+                    .whereEqualTo("clinicShopAddressId", viewModel.addressId)
                     .whereArrayContains("optionalService",
                         mapOf(
                             "disable" to false,

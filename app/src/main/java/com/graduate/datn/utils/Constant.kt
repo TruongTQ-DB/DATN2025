@@ -14,7 +14,7 @@ object Constant {
     const val TABLE_THE_NEW = "the_new"
 
     const val TYPE_ACCOUNT_CUSTOMER = 0
-    const val TYPE_ACCOUNT_BARBER_NAME = 1
+    const val TYPE_ACCOUNT_DOCTER_NAME = 1
     const val TYPE_ACCOUNT_HAIR_SHAMPOOER = 2
 
     const val TYPE_SERVICE_CUTTING = 0

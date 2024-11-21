@@ -25,7 +25,7 @@ import com.graduate.datn.extension.*
 import com.graduate.datn.ui.common.crop.CropImageFragment
 import com.graduate.datn.utils.BundleKey
 import com.graduate.datn.utils.Constant
-import com.graduate.datn.utils.Constant.TYPE_ACCOUNT_BARBER_NAME
+import com.graduate.datn.utils.Constant.TYPE_ACCOUNT_DOCTER_NAME
 import com.graduate.datn.utils.Constant.TYPE_ACCOUNT_CUSTOMER
 import com.graduate.datn.utils.FileUtil
 import com.graduate.datn.utils.RealPathUtil
@@ -72,22 +72,22 @@ class AddDocterNameFragment : BaseFragment() {
         rcv_optional_service.adapter = mAdapter
         rcv_service.adapter = mServiceAdapter
         viewModel.apply {
-            isAddBarber = null
-            isUpdateBarber = null
+            isAddDocter = null
+            isUpdateDocter = null
             dataUser = null
             serviceSelected.clear()
             optionalServiceSelected.clear()
         }
 
         arguments?.let {
-            if (it.containsKey(BundleKey.KEY_IS_CREATE_BARBER)) {
-                viewModel.isAddBarber = it.getBoolean(BundleKey.KEY_IS_CREATE_BARBER)
+            if (it.containsKey(BundleKey.KEY_IS_CREATE_DOCTER)) {
+                viewModel.isAddDocter = it.getBoolean(BundleKey.KEY_IS_CREATE_DOCTER)
             }
-            if (it.containsKey(BundleKey.KEY_IS_UPDATE_BARBER)) {
-                viewModel.isUpdateBarber = it.getBoolean(BundleKey.KEY_IS_UPDATE_BARBER)
+            if (it.containsKey(BundleKey.KEY_IS_UPDATE_DOCTER)) {
+                viewModel.isUpdateDocter = it.getBoolean(BundleKey.KEY_IS_UPDATE_DOCTER)
             }
-            if (it.containsKey(BundleKey.KEY_DATA_UPDATE_BARBER)) {
-                viewModel.dataUser = it.getSerializable(BundleKey.KEY_DATA_UPDATE_BARBER) as User?
+            if (it.containsKey(BundleKey.KEY_DATA_UPDATE_DOCTER)) {
+                viewModel.dataUser = it.getSerializable(BundleKey.KEY_DATA_UPDATE_DOCTER) as User?
             }
 
         }
@@ -105,14 +105,14 @@ class AddDocterNameFragment : BaseFragment() {
     }
 
     private fun setDataUpdate() {
-        if (viewModel.isUpdateBarber != null) {
+        if (viewModel.isUpdateDocter != null) {
             tv_title_confirm_password.gone()
             tv_title_password.gone()
             input_password.gone()
             input_confirm_password.gone()
             tv_title_email.text = "Email"
             input_username.setUnFocusable()
-            if (viewModel.isUpdateBarber == true) {
+            if (viewModel.isUpdateDocter == true) {
                 header.setTitle("Chi tiết Bác sĩ")
                 viewModel.dataUser.apply {
                     imv_chevron_right_1.gone()
@@ -159,7 +159,7 @@ class AddDocterNameFragment : BaseFragment() {
     }
 
     private fun setUpView() {
-        if (viewModel.isAddBarber == true || viewModel.isUpdateBarber == true) {
+        if (viewModel.isAddDocter == true || viewModel.isUpdateDocter == true) {
             header.setTitle("Thêm Bác sĩ")
             tv_choose_address_title.visible()
             tv_choose_service_title.visible()
@@ -234,7 +234,7 @@ class AddDocterNameFragment : BaseFragment() {
 //                    edt_optional_service.text.toString()
                 )
             ) {
-                if (viewModel.isUpdateBarber == null) {
+                if (viewModel.isUpdateDocter == null) {
                     val idAccountOld = mAuth.currentUser?.uid
                     mAuth.createUserWithEmailAndPassword(input_username.getText(),
                         input_password.getText())
@@ -406,7 +406,7 @@ class AddDocterNameFragment : BaseFragment() {
         }
 
         edt_choose_address.onAvoidDoubleClick {
-            if (viewModel.isUpdateBarber == null) {
+            if (viewModel.isUpdateDocter == null) {
                 showLoading()
                 pickerService = BottomSheetWheelPicker(requireContext(), isAddress = true)
                 getDataListAddress()
@@ -617,12 +617,12 @@ class AddDocterNameFragment : BaseFragment() {
                             data.optionalServiceId,
                             data.optionalServiceName)
                     }
-                    val userData = if (viewModel.isAddBarber == true) {
+                    val userData = if (viewModel.isAddDocter == true) {
                         User(
                             id = id,
                             name = input_name.getText(),
                             avatar = imageUrl.toString(),
-                            account = TYPE_ACCOUNT_BARBER_NAME,
+                            account = TYPE_ACCOUNT_DOCTER_NAME,
                             addressName = edt_choose_address.text.toString(),
                             clinicShopAddressId = viewModel.addressId,
 //                            serviceName = edt_service.text.toString(),
@@ -686,51 +686,51 @@ class AddDocterNameFragment : BaseFragment() {
         serviceName: String,
         optionalServiceName: String,
     ): Boolean {
-        if (viewModel.avatarFile?.absolutePath == null && viewModel.isUpdateBarber == null) {
+        if (viewModel.avatarFile?.absolutePath == null && viewModel.isUpdateDocter == null) {
             toast(R.string.add_service_no_image)
             hideLoading()
             return false
         }
-        if (TextUtils.isEmpty(userName.trim()) && viewModel.isUpdateBarber == null) {
+        if (TextUtils.isEmpty(userName.trim()) && viewModel.isUpdateDocter == null) {
             toast(R.string.input_email)
             hideLoading()
             return false
         }
-        if (userName.length > USER_NAME_MAX_LENGTH_VALIDATION && viewModel.isUpdateBarber == null) {
+        if (userName.length > USER_NAME_MAX_LENGTH_VALIDATION && viewModel.isUpdateDocter == null) {
             toast(R.string.register_input_email_max_length)
             hideLoading()
             return false
         }
 
-        if (userName.contains("@") || userName.checkHasContainAlphabetCharacter() && viewModel.isUpdateBarber == null) {
+        if (userName.contains("@") || userName.checkHasContainAlphabetCharacter() && viewModel.isUpdateDocter == null) {
             if (!(userName).isEmailValid()) {
                 toast(R.string.register_input_email_not_email)
                 hideLoading()
                 return false
             }
         }
-        if (TextUtils.isEmpty(password.trim()) && viewModel.isUpdateBarber == null) {
+        if (TextUtils.isEmpty(password.trim()) && viewModel.isUpdateDocter == null) {
             toast(R.string.input_password)
             hideLoading()
             return false
         }
-        if (password.length > PASSWORD_MAX_LENGTH_VALIDATION && viewModel.isUpdateBarber == null) {
+        if (password.length > PASSWORD_MAX_LENGTH_VALIDATION && viewModel.isUpdateDocter == null) {
             toast(R.string.register_input_password_max_length)
             hideLoading()
             return false
         }
 
-        if (password.length < PASSWORD_LENGTH_VALIDATION && viewModel.isUpdateBarber == null) {
+        if (password.length < PASSWORD_LENGTH_VALIDATION && viewModel.isUpdateDocter == null) {
             toast(R.string.register_input_password_min_length)
             hideLoading()
             return false
         }
-        if (TextUtils.isEmpty(confirmPassword.trim()) && viewModel.isUpdateBarber == null) {
+        if (TextUtils.isEmpty(confirmPassword.trim()) && viewModel.isUpdateDocter == null) {
             toast(R.string.confirm_password)
             hideLoading()
             return false
         }
-        if (password != (confirmPassword) && viewModel.isUpdateBarber == null) {
+        if (password != (confirmPassword) && viewModel.isUpdateDocter == null) {
             toast(R.string.register_input_confirm_password_not_match)
             hideLoading()
             return false
@@ -770,17 +770,17 @@ class AddDocterNameFragment : BaseFragment() {
             hideLoading()
             return false
         }
-        if (TextUtils.isEmpty(barberShopAddress.trim()) && viewModel.isAddBarber == true) {
+        if (TextUtils.isEmpty(barberShopAddress.trim()) && viewModel.isAddDocter == true) {
             toast(R.string.chose_cli_address)
             hideLoading()
             return false
         } //        if (TextUtils.isEmpty(serviceName.trim()) && viewModel.isAddBarber == true) {
-        if (viewModel.serviceSelected.isNullOrEmpty() && viewModel.isAddBarber == true) {
+        if (viewModel.serviceSelected.isNullOrEmpty() && viewModel.isAddDocter == true) {
             toast(R.string.chose_service)
             hideLoading()
             return false
         }
-        if (viewModel.optionalServiceSelected.isNullOrEmpty() && viewModel.isAddBarber == true) {
+        if (viewModel.optionalServiceSelected.isNullOrEmpty() && viewModel.isAddDocter == true) {
             toast(R.string.chose_optional_service)
             hideLoading()
             return false

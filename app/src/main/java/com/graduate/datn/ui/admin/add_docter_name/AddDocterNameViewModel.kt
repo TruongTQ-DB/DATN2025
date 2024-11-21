@@ -29,8 +29,8 @@ class AddDocterNameViewModel @Inject constructor(var repo: Repository) : BaseVie
     var optionalServiceSelected = mutableListOf<OptionalService>()
     var serviceSelected = mutableListOf<Service>()
     var gender: Int = -1
-    var isAddBarber: Boolean? = null
-    var isUpdateBarber: Boolean? = null
+    var isAddDocter: Boolean? = null
+    var isUpdateDocter: Boolean? = null
     var dataUser: User? = null
 
     init {

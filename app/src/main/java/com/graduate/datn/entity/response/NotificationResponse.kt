@@ -5,7 +5,7 @@ import com.google.firebase.Timestamp
 data class NotificationResponse(
     var userId: String? = null,
 
-    var barberId: String? = null,
+    var docterId: String? = null,
 
     var bookingId: String? = null,
 
@@ -13,7 +13,7 @@ data class NotificationResponse(
 
     var message: String? = null,
 
-    var barberName: String? = null,
+    var docterName: String? = null,
 
     val nameUser: String?= null,
 

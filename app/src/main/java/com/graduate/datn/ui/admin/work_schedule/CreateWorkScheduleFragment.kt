@@ -116,7 +116,7 @@ class CreateWorkScheduleFragment : BaseFragment() {
 
         currentDateTimestamp?.let {
             workScheduleCollection
-                .whereEqualTo("idBarberName", viewModelWorkSchedule.staffId)
+                .whereEqualTo("idDocterName", viewModelWorkSchedule.staffId)
                 .whereEqualTo("approve", true)
                 .whereGreaterThanOrEqualTo("dateTimestamp", it)
 //                .orderBy("date")
@@ -379,7 +379,7 @@ class CreateWorkScheduleFragment : BaseFragment() {
                     Log.e("testDataaa", it.date + "     " + it.timeRanges.toString())
                     val query = workScheduleCollection
                         .whereEqualTo("approve", true)
-                        .whereEqualTo("idBarberName",
+                        .whereEqualTo("idDocterName",
                             viewModelWorkSchedule.staffId).whereEqualTo("date", it.date)
 
                     val existingScheduleTask = query.get()
@@ -388,7 +388,7 @@ class CreateWorkScheduleFragment : BaseFragment() {
                         if (documents.isEmpty) {
                             // Nếu không tìm thấy dữ liệu, thêm mới
                             val day = it.date
-                            val datas = hashMapOf("idBarberName" to it.idBarberName,
+                            val datas = hashMapOf("idDocterName" to it.idDocterName,
                                 "approve" to true,
                                 "date" to day,
                                 "avatar" to it.avatar,
@@ -685,7 +685,7 @@ class CreateWorkScheduleFragment : BaseFragment() {
 
     private fun getDateStaff() {
         showLoading()
-        userCollection.whereEqualTo("account", Constant.TYPE_ACCOUNT_BARBER_NAME).orderBy("name")
+        userCollection.whereEqualTo("account", Constant.TYPE_ACCOUNT_DOCTER_NAME).orderBy("name")
             .get().addOnSuccessListener { documents ->
                 hideLoading()
                 val dataList = documents.map { documentSnapshot ->

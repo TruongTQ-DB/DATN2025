@@ -86,7 +86,7 @@ class ChooseOptionalServiceFragment : BaseFragment() {
                     optionalServiceAdapter.showLoadingItem(true)
                     showLoading()
                     optionServiceCollection
-                        .whereEqualTo("barberShopAddressId", viewModel.addressId)
+                        .whereEqualTo("clinicShopAddressId", viewModel.addressId)
                         .whereEqualTo("serviceId", viewModel.serviceId)
                         .orderBy("name").startAfter(viewModel.lastVisibleOptionService!!)
                         .limit(20)
@@ -122,7 +122,7 @@ class ChooseOptionalServiceFragment : BaseFragment() {
                     serviceAdapter.showLoadingItem(true)
                     showLoading()
                     serviceCollection
-                        .whereEqualTo("barberShopAddressId", viewModel.addressId)
+                        .whereEqualTo("clinicShopAddressId", viewModel.addressId)
                         .orderBy("name").startAfter(viewModel.lastVisibleService!!).limit(20)
                         .get().addOnSuccessListener { documents ->
                             hideLoading()
@@ -185,7 +185,7 @@ class ChooseOptionalServiceFragment : BaseFragment() {
         showLoading()
         serviceAdapter.clear()
         serviceCollection
-            .whereEqualTo("barberShopAddressId", viewModel.addressId)
+            .whereEqualTo("clinicShopAddressId", viewModel.addressId)
             .orderBy("name").limit(20).get()
             .addOnSuccessListener { documents ->
                 hideLoading()
@@ -218,7 +218,7 @@ class ChooseOptionalServiceFragment : BaseFragment() {
         showLoading()
         optionalServiceAdapter.clear()
         optionServiceCollection
-            .whereEqualTo("barberShopAddressId", viewModel.addressId)
+            .whereEqualTo("clinicShopAddressId", viewModel.addressId)
             .whereEqualTo("serviceId", viewModel.serviceId)
             .orderBy("name").limit(20).get()
             .addOnSuccessListener { documents ->

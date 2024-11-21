@@ -71,7 +71,7 @@ class ChooseServiceFragment : BaseFragment() {
                     mAdapter.showLoadingItem(true)
                     showLoading()
                     addressesCollection
-                        .whereEqualTo("barberShopAddressId", viewModel.addressId)
+                        .whereEqualTo("clinicShopAddressId", viewModel.addressId)
                         .orderBy("name")
                         .startAfter(viewModel.lastVisibleDocument!!)
                         .limit(20)
@@ -126,7 +126,7 @@ class ChooseServiceFragment : BaseFragment() {
         showLoading()
         mAdapter.clear()
         addressesCollection
-            .whereEqualTo("barberShopAddressId", viewModel.addressId)
+            .whereEqualTo("clinicShopAddressId", viewModel.addressId)
             .orderBy("name").limit(20).get()
             .addOnSuccessListener { documents ->
                 hideLoading()

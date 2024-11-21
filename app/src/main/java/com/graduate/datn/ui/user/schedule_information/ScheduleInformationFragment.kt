@@ -159,17 +159,17 @@ class ScheduleInformationFragment : BaseFragment() {
                                             ?.let { it1 -> com.google.firebase.Timestamp(it1) }
                                     val dataBooking = BookingResponse(
                                         userId = user?.id,
-                                        barberId = barberNameId?.id,
+                                        docterId = barberNameId?.id,
                                         serviceId = serviceId,
                                         optionalServiceId = optionalServiceId,
                                         serviceName = serviceName,
                                         optionalServiceName = optionalServiceName,
-                                        barberAvatar = barberNameId?.avatar,
-                                        barberName = barberNameId?.name,
+                                        docterAvatar = barberNameId?.avatar,
+                                        docterName  = barberNameId?.name,
                                         detailNameDocter = barberNameId?.detailname,
-                                        barberPhone = barberNameId?.phone,
-                                        barberShopName = addressName,
-                                        barberShopAddress = address,
+                                        docterPhone = barberNameId?.phone,
+                                        clinicShopName = addressName,
+                                        clinicShopAddress = address,
                                         avatarUser = user?.avatar,
                                         nameUser = user?.name,
                                         phoneUser = user?.phone,
@@ -204,7 +204,7 @@ class ScheduleInformationFragment : BaseFragment() {
                                                             if (barber.first().token.isNullOrEmpty()) {
                                                                 NotificationResponse(
                                                                     userId ="",
-                                                                    barberId = viewModel.barberNameId?.id,
+                                                                    docterId = viewModel.barberNameId?.id,
                                                                     bookingId = idBooking,
                                                                     title = "Đăng ký khám bệnh",
                                                                     message = "Bạn có lịch khám cho Bệnh nhân ${viewModel.user?.name} lúc ${viewModel.timeFrom} ${
@@ -212,7 +212,7 @@ class ScheduleInformationFragment : BaseFragment() {
                                                                             DATE_FORMAT_6,
                                                                             DATE_FORMAT_2)
                                                                     }",
-                                                                    barberName = viewModel.barberNameId?.name,
+                                                                    docterName = viewModel.barberNameId?.name,
 
                                                                     nameUser = viewModel.user?.name,
                                                                     date = viewModel.date,
@@ -227,7 +227,7 @@ class ScheduleInformationFragment : BaseFragment() {
                                                             } else {
                                                                 NotificationResponse(
                                                                     userId = "",
-                                                                    barberId = viewModel.barberNameId?.id,
+                                                                    docterId = viewModel.barberNameId?.id,
                                                                     bookingId = idBooking,
                                                                     title = "Đăng ký khám bệnh",
                                                                     message = "Bạn có lịch khám cho Bệnh nhân ${viewModel.user?.name} lúc ${viewModel.timeFrom} ${
@@ -235,7 +235,7 @@ class ScheduleInformationFragment : BaseFragment() {
                                                                             DATE_FORMAT_6,
                                                                             DATE_FORMAT_2)
                                                                     }",
-                                                                    barberName = viewModel.barberNameId?.name,
+                                                                    docterName = viewModel.barberNameId?.name,
                                                                     nameUser = viewModel.user?.name,
                                                                     date = viewModel.date,
                                                                     timeFrom = viewModel.timeFrom,

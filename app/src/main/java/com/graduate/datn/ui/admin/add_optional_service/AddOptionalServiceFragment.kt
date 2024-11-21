@@ -208,7 +208,7 @@ class AddOptionalServiceFragment : BaseFragment() {
     }
 
     private fun getDataListService() {
-        servicesCollection.whereEqualTo("barberShopAddressId", viewModel.addressId)
+        servicesCollection.whereEqualTo("clinicShopAddressId", viewModel.addressId)
             .orderBy("name").get()
             .addOnSuccessListener { documents ->
                 hideLoading()
@@ -242,7 +242,7 @@ class AddOptionalServiceFragment : BaseFragment() {
                         image = imageUrl.toString(),
                         serviceId = viewModel.serviceId,
                         serviceName = edt_service.text.toString(),
-                        barberShopAddressId = viewModel.addressId,
+                        clinicShopAddressId = viewModel.addressId,
                         addressName = edt_address.text.toString(),
                         status = 0,
                         price = input_optional_service_price.getText()

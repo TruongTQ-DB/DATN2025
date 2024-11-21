@@ -21,9 +21,9 @@ class ScheduleAdapter(context: Context) : EndlessLoadingRecyclerViewAdapter(cont
         val item = getItem(position, BookingItem::class.java)
         item?.let {
             holder.itemView.apply {
-                barber_name.text = it.data.barberName
-                tv_barber_shop_address.text = it.data.barberShopAddress
-                img_barber.loadImageUrl(it.data.barberAvatar)
+                barber_name.text = it.data.docterName
+                tv_barber_shop_address.text = it.data.clinicShopAddress
+                img_barber.loadImageUrl(it.data.docterAvatar)
                 tv_daytime.text = it.data.date?.formatDateSchedule() + " | " + it.data.timeFrom
                 tv_optional_service_name.text = it.data.optionalServiceName
 
@@ -36,7 +36,7 @@ class ScheduleAdapter(context: Context) : EndlessLoadingRecyclerViewAdapter(cont
                     1 -> {
                         tv_status.background =
                             context.getDrawable(R.drawable.bg_schedule_status_done)
-                        "Đã cắt"
+                        "Đã Khám"
                     }
                     2 -> {
                         tv_status.background =

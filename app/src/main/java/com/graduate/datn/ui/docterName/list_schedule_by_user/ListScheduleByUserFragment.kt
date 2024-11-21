@@ -79,7 +79,7 @@ class ListScheduleByUserFragment : BaseFragment() {
                     bookingCollection
                         .orderBy("date")
                         .whereEqualTo("userId", viewModel.userId)
-                        .whereEqualTo("barberId", auth.currentUser?.uid)
+                        .whereEqualTo("docterId", auth.currentUser?.uid)
                         .startAfter(viewModel.lastVisibleDocument!!)
                         .limit(20)
                         .get().addOnSuccessListener { documents ->
@@ -125,7 +125,7 @@ class ListScheduleByUserFragment : BaseFragment() {
         showLoading()
         mScheduleAdapter.clear()
         bookingCollection
-            .whereEqualTo("barberId", auth.currentUser?.uid)
+            .whereEqualTo("docterId", auth.currentUser?.uid)
             .whereEqualTo("userId", viewModel.userId)
             .orderBy("date").limit(20)
             .get()

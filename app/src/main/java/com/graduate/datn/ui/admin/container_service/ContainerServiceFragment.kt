@@ -156,7 +156,7 @@ class ContainerServiceFragment : BaseFragment() {
         mAdapter.onClick = {
             if (it is ServiceItem) {
                 getVC().addFragment(AddServiceFragment::class.java, Bundle().apply {
-                    putSerializable(BundleKey.KEY_SERVICE_BARBER_SHOP, it)
+                    putSerializable(BundleKey.KEY_SERVICE_DOCTER_SHOP, it)
                 })
             } else if (it is OptionalServiceItem) {
                 getVC().addFragment(AddOptionalServiceFragment::class.java, Bundle().apply {

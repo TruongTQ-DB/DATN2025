@@ -13,7 +13,7 @@ import com.graduate.datn.base.adapter.EndlessLoadingRecyclerViewAdapter
 import com.graduate.datn.entity.response.BookingResponse
 import com.graduate.datn.extension.*
 import com.graduate.datn.ui.docterName.customer_information.CustomerInformationFragment
-import com.graduate.datn.utils.BundleKey.ID_CUSTOMER_HAIR
+import com.graduate.datn.utils.BundleKey.ID_CUSTOMER_BOOKING
 import com.graduate.datn.utils.Constant
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -87,7 +87,7 @@ class ListBookingCustomerFragment : BaseFragment() {
                     mAdapter.showLoadingItem(true)
                     showLoading()
                     bookingCollection
-                        .whereEqualTo("barberId", auth.currentUser?.uid)
+                        .whereEqualTo("docterId", auth.currentUser?.uid)
 //                        .whereArrayContains("nameUser", edt_search.text.toString())
                         .orderBy("nameUser")
                         .startAfter(viewModel.lastVisibleDocument!!)
@@ -124,7 +124,7 @@ class ListBookingCustomerFragment : BaseFragment() {
 
         mAdapter.onClick = {
             getVC().addFragment(CustomerInformationFragment::class.java, Bundle().apply {
-                putString(ID_CUSTOMER_HAIR, it)
+                putString(ID_CUSTOMER_BOOKING, it)
             })
         }
     }
@@ -138,7 +138,7 @@ class ListBookingCustomerFragment : BaseFragment() {
         showLoading()
         mAdapter.clear()
         bookingCollection
-            .whereEqualTo("barberId", auth.currentUser?.uid)
+            .whereEqualTo("docterId", auth.currentUser?.uid)
 //            .whereArrayContains("nameUser", edt_search.text.toString())
             .orderBy("nameUser").limit(20).get()
             .addOnSuccessListener { documents ->

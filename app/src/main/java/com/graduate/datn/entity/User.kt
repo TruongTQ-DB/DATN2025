@@ -23,7 +23,6 @@ data class User(
 
     var phone: String? = null,
 
-  //  var barberShopAddressId: String? = null,
     var clinicShopAddressId: String? = null,
 
     var addressName: String? = null,

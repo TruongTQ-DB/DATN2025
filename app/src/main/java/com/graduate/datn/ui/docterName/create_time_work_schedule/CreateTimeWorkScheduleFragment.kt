@@ -393,7 +393,7 @@ class CreateTimeWorkScheduleFragment : BaseFragment() {
                         if (documents.isEmpty) {
                             // Nếu không tìm thấy dữ liệu, thêm mới
                             val day = it.date
-                            val datas = hashMapOf("idBarberName" to it.idBarberName,
+                            val datas = hashMapOf("idDocterName" to it.idDocterName,
                                 "date" to day,
                                 "avatar" to it.avatar,
                                 "name" to it.name,

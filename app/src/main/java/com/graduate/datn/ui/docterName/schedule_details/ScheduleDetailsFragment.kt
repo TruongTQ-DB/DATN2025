@@ -76,7 +76,7 @@ class ScheduleDetailsFragment : BaseFragment() {
             }
         }
         btn_cancel.onAvoidDoubleClick {
-            if (auth.currentUser?.uid != viewModel.data?.userId && auth.currentUser?.uid != viewModel.data?.barberId) {
+            if (auth.currentUser?.uid != viewModel.data?.userId && auth.currentUser?.uid != viewModel.data?.docterId) {
                 viewModel.idSchedule?.let { it1 ->
                     showLoading()
                     val data = mapOf("status" to TYPE_CANCEL,
@@ -84,7 +84,7 @@ class ScheduleDetailsFragment : BaseFragment() {
                     bookingCollection.document(it1).update(data)
                         .addOnSuccessListener {
                             toast("Huỷ Lịch thành công!")
-                            updateStatusSchedule(viewModel.data?.barberId,
+                            updateStatusSchedule(viewModel.data?.docterId,
                                 viewModel.data?.date,
                                 viewModel.data?.timeFrom)
                             reloadData()
@@ -98,7 +98,7 @@ class ScheduleDetailsFragment : BaseFragment() {
                             hideLoading()
                         }
                 }
-            } else if (auth.currentUser?.uid == viewModel.data?.barberId) {
+            } else if (auth.currentUser?.uid == viewModel.data?.docterId) {
                 if (getTimeCurrent() != null) {
                     showLoading()
                     val timeDifference =
@@ -110,7 +110,7 @@ class ScheduleDetailsFragment : BaseFragment() {
                             bookingCollection.document(it1).update(data)
                                 .addOnSuccessListener {
                                     toast("Huỷ Lịch thành công!")
-                                    updateStatusSchedule(viewModel.data?.barberId,
+                                    updateStatusSchedule(viewModel.data?.docterId,
                                         viewModel.data?.date,
                                         viewModel.data?.timeFrom)
                                     saveNotification(true)
@@ -140,7 +140,7 @@ class ScheduleDetailsFragment : BaseFragment() {
                         bookingCollection.document(it1).update(data)
                             .addOnSuccessListener {
                                 toast("Huỷ Lịch thành công!")
-                                updateStatusSchedule(viewModel.data?.barberId,
+                                updateStatusSchedule(viewModel.data?.docterId,
                                     viewModel.data?.date,
                                     viewModel.data?.timeFrom)
                                 saveNotification(true)
@@ -158,7 +158,7 @@ class ScheduleDetailsFragment : BaseFragment() {
         }
 
         btn_complete.onAvoidDoubleClick {
-            if (auth.currentUser?.uid == viewModel.data?.barberId) {
+            if (auth.currentUser?.uid == viewModel.data?.docterId) {
                 if (getTimeCurrent() != null) {
                     showLoading()
                     val timeDifference =
@@ -218,7 +218,7 @@ class ScheduleDetailsFragment : BaseFragment() {
 
     private fun setUpData(data: BookingResponse?) {
         viewModel.data = data
-        if (auth.currentUser?.uid == data?.barberId) {
+        if (auth.currentUser?.uid == data?.docterName) {
             img_avatar.loadImageUrl(data?.avatarUser)
             tv_name.text = data?.nameUser
 
@@ -237,10 +237,10 @@ class ScheduleDetailsFragment : BaseFragment() {
                 setUpShowButton(false)
             }
         } else if (auth.currentUser?.uid == data?.userId) {
-            img_avatar.loadImageUrl(data?.barberAvatar)
-            tv_name.text = data?.barberName
+            img_avatar.loadImageUrl(data?.docterAvatar)
+            tv_name.text = data?.docterName
             tv_detail_name.text = data?.detailNameDocter
-            viewModel.phone = data?.barberPhone
+            viewModel.phone = data?.docterPhone
             if (data?.timeStamp?.seconds!! > Timestamp.now().seconds && data.status == 0) {
                 setUpShowButton(true)
                 btn_complete.gone()
@@ -263,8 +263,8 @@ class ScheduleDetailsFragment : BaseFragment() {
         tv_time_ex.text = data?.timeFrom
 
         tv_time.text = data?.timeFrom + " - " + data?.timeTo
-        tv_address_name.text = data?.barberShopName
-        tv_barber_address.text = data?.barberShopAddress
+        tv_address_name.text = data?.clinicShopName
+        tv_barber_address.text = data?.clinicShopAddress
         tv_money.text = data?.price +" VND"
         if (data?.status == 2) {
             ll_reason.visible()
@@ -327,11 +327,11 @@ class ScheduleDetailsFragment : BaseFragment() {
         }
     }
 
-    private fun updateStatusSchedule(barberId: String?, date: String?, timeFrom: String?) {
+    private fun updateStatusSchedule(docterId: String?, date: String?, timeFrom: String?) {
         mWorkScheduleCollection
             .whereEqualTo("approve", true)
             .whereEqualTo("date", date)
-            .whereEqualTo("idBarberName", barberId)
+            .whereEqualTo("idDocterName", docterId)
             .limit(1)
             .get()
             .addOnSuccessListener { documentSnapshot ->
@@ -386,7 +386,7 @@ class ScheduleDetailsFragment : BaseFragment() {
 
     private fun getTokenBarber() {
         mUserCollection
-            .whereEqualTo("id", viewModel.data?.barberId)
+            .whereEqualTo("id", viewModel.data?.docterId)
             .limit(1)
             .get()
             .addOnSuccessListener { querySnapshot ->
@@ -411,11 +411,11 @@ class ScheduleDetailsFragment : BaseFragment() {
             if (isCancel) {
                 NotificationResponse(
                     userId = viewModel.data?.userId,
-                    barberId = if (auth.currentUser?.uid != viewModel.data?.barberId) viewModel.data?.barberId else "",
+                    docterId = if (auth.currentUser?.uid != viewModel.data?.docterId) viewModel.data?.docterId else "",
                     bookingId = viewModel.idSchedule,
                     title = "Huỷ Lịch Khám bệnh!",
                     message = "Lịch Khám bệnh ${viewModel.data?.timeFrom} ${viewModel.data?.date} đã bị Huỷ!",
-                    barberName = viewModel.data?.barberName,
+                    docterName = viewModel.data?.docterName,
                     nameUser = viewModel.data?.nameUser,
                     date = viewModel.data?.date,
                     timeFrom = viewModel.data?.timeFrom,
@@ -429,11 +429,11 @@ class ScheduleDetailsFragment : BaseFragment() {
             } else {
                 NotificationResponse(
                     userId = viewModel.data?.userId,
-                    barberId = "",
+                    docterId = "",
                     bookingId = viewModel.idSchedule,
                     title = "Xác nhận Khám bệnh!",
-                    message = "Lịch Khám bệnh lúc ${viewModel.data?.timeFrom} ${viewModel.data?.date} đã được cắt!",
-                    barberName = viewModel.data?.barberName,
+                    message = "Lịch Khám bệnh lúc ${viewModel.data?.timeFrom} ${viewModel.data?.date} đã được !",
+                    docterName = viewModel.data?.docterName,
                     nameUser = viewModel.data?.nameUser,
                     date = viewModel.data?.date,
                     timeFrom = viewModel.data?.timeFrom,

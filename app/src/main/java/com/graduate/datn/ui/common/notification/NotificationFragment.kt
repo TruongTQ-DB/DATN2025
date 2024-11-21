@@ -81,7 +81,7 @@ class NotificationFragment : BaseFragment() {
                 override fun onLoadMore() {
                     mAddressAdapter.showLoadingItem(true)
                     showLoading()
-                    addressesCollection.whereEqualTo(if (viewModel.isUser) "userId" else "barberId",
+                    addressesCollection.whereEqualTo(if (viewModel.isUser) "userId" else "docterId",
                         auth.currentUser?.uid)
                         .orderBy("timestamp", Query.Direction.DESCENDING)
                         .startAfter(viewModel.lastVisibleDocument)
@@ -132,7 +132,7 @@ class NotificationFragment : BaseFragment() {
         showLoading()
         mAddressAdapter.clear()
         addressesCollection
-            .whereEqualTo(if (viewModel.isUser) "userId" else "barberId", auth.currentUser?.uid)
+            .whereEqualTo(if (viewModel.isUser) "userId" else "docterId", auth.currentUser?.uid)
             .orderBy("timestamp", Query.Direction.DESCENDING)
             .limit(20)
             .get()

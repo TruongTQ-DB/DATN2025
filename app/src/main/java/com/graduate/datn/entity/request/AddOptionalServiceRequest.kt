@@ -10,7 +10,7 @@ data class AddOptionalServiceRequest(
     val serviceId: String,
 
     @SerializedName("barber_shop_address_id")
-    val barberShopAddressId: String ?= null,
+    val clinicShopAddressId: String ?= null,
 
     @SerializedName("address_name")
     val addressName: String,

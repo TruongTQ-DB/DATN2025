@@ -6,8 +6,8 @@ import java.io.Serializable
 data class ServiceResponse(
     @SerializedName("id")
     val id: String ?= null,
-    @SerializedName("barber_shop_address_id")
-    val barberShopAddressId: String ?= null,
+    @SerializedName("clinic_shop_address_id")
+    val clinicShopAddressId: String ?= null,
     @SerializedName("name")
     val name: String ?= null,
     @SerializedName("image")

@@ -12,7 +12,7 @@ import com.graduate.datn.extension.visible
 import com.graduate.datn.ui.admin.list_work_schedule.DateToWorkItem
 import com.graduate.datn.ui.admin.work_schedule_detail.WorkScheduleDetailsFragment
 import com.graduate.datn.utils.BundleKey
-import com.graduate.datn.utils.BundleKey.ID_BARBER
+import com.graduate.datn.utils.BundleKey.ID_DOCTER
 import com.graduate.datn.utils.Constant
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -31,7 +31,7 @@ class ListDateScheduleFragment : BaseFragment() {
     }
     private val db = FirebaseFirestore.getInstance()
     private val mCollection = db.collection(Constant.TABLE_WORK_SCHEDULE)
-    private var idBarber: String? = ""
+    private var idDocter: String? = ""
     private lateinit var auth: FirebaseAuth
 
     override fun backFromAddFragment() {
@@ -49,8 +49,8 @@ class ListDateScheduleFragment : BaseFragment() {
 
     override fun initData() {
         arguments?.let {
-            if (it.containsKey(ID_BARBER)) {
-                idBarber = it.getString(ID_BARBER)
+            if (it.containsKey(ID_DOCTER)) {
+                idDocter = it.getString(ID_DOCTER)
             }
         }
         refreshData()
@@ -98,7 +98,7 @@ class ListDateScheduleFragment : BaseFragment() {
         mAdapter.clear()
         mCollection
             .orderBy("dateTimestamp", Query.Direction.DESCENDING)
-            .whereEqualTo("idBarberName", idBarber)
+            .whereEqualTo("idDocterName", idDocter)
             .whereEqualTo("approve", false)
             .get().addOnSuccessListener { documents ->
                 mAdapter.hideLoadingItem()

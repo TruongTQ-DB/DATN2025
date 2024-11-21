@@ -139,7 +139,6 @@ class TabContainerDocterFragment : BaseFragment() {
 
 
     companion object {
-        const val KEY_TAB_BARBER_FRAGMENT = "KEY_TAB_FRAGMENT_BARBER"
         const val KEY_TAB_DOCTER_FRAGMENT = "KEY_TAB_FRAGMENT_DOCTER"
         const val TAB_HOME = 0
         const val TAB_PROFILE_DOCTER = 4

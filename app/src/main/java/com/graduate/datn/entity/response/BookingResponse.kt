@@ -5,7 +5,7 @@ import com.google.firebase.Timestamp
 data class BookingResponse(
     var userId: String? = null,
 
-    var barberId: String? = null,
+    var docterId: String? = null,
 
     var serviceId: String? = null,
 
@@ -15,17 +15,17 @@ data class BookingResponse(
 
     var optionalServiceName: String? = null,
 
-    var barberAvatar: String? = null,
+    var docterAvatar: String? = null,
 
-    var barberName: String? = null,
+    var docterName: String? = null,
 
     var detailNameDocter: String? = null,
 
-    val barberPhone: String?= null,
+    val docterPhone: String?= null,
 
-    var barberShopName: String?= null,
+    var clinicShopName: String?= null,
 
-    var barberShopAddress: String? = null,
+    var clinicShopAddress: String? = null,
 
     var avatarUser: String? = null,
 

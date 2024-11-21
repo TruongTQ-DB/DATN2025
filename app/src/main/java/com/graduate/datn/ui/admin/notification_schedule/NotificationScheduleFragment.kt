@@ -61,7 +61,7 @@ class NotificationScheduleFragment : BaseFragment() {
 
         mAdapter.onClick = {
             getVC().addFragment(ListDateScheduleFragment::class.java, Bundle().apply {
-                putString(BundleKey.ID_BARBER, it.data.idBarberName)
+                putString(BundleKey.ID_DOCTER, it.data.idDocterName)
             })
         }
     }
@@ -91,7 +91,7 @@ class NotificationScheduleFragment : BaseFragment() {
                         val data = documentSnapshot.toObject(DateToWorkRequest::class.java)
                         data.let {
                             val isUnique =
-                                dateSet.none { it.data.idBarberName == data.idBarberName }
+                                dateSet.none { it.data.idDocterName == data.idDocterName }
                             if (isUnique) {
                                 dateSet.add(DateToWorkItem(id, data))
                             }

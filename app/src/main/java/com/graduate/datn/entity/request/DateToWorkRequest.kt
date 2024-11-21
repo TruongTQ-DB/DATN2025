@@ -4,7 +4,7 @@ import com.google.firebase.Timestamp
 import java.io.Serializable
 
 data class DateToWorkRequest(
-    val idBarberName: String?= null,
+    val idDocterName: String?= null,
     val avatar: String ?= null,
     val name: String ?= null,
     val date: String?= null,

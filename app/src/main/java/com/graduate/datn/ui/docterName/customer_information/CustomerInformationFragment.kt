@@ -59,8 +59,8 @@ class CustomerInformationFragment : BaseFragment() {
 
     override fun initData() {
         arguments?.let {
-            if (it.containsKey(BundleKey.ID_CUSTOMER_HAIR)) {
-                viewModel.idUser = it.getString(BundleKey.ID_CUSTOMER_HAIR)
+            if (it.containsKey(BundleKey.ID_CUSTOMER_BOOKING)) {
+                viewModel.idUser = it.getString(BundleKey.ID_CUSTOMER_BOOKING)
             }
         }
         getUser()
@@ -140,7 +140,7 @@ class CustomerInformationFragment : BaseFragment() {
         mScheduleAdapter.clear()
         bookingCollection
             .whereEqualTo("userId", viewModel.idUser)
-            .whereEqualTo("barberId", auth.currentUser?.uid)
+            .whereEqualTo("docterId", auth.currentUser?.uid)
             .orderBy("date").limit(3)
             .get()
             .addOnSuccessListener { documents ->

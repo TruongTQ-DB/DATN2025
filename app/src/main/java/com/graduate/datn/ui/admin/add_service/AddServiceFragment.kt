@@ -57,9 +57,9 @@ class AddServiceFragment : BaseFragment() {
 
     override fun initData() {
         arguments?.let {
-            if (it.containsKey(BundleKey.KEY_SERVICE_BARBER_SHOP)) {
+            if (it.containsKey(BundleKey.KEY_SERVICE_DOCTER_SHOP)) {
                 viewModel.serviceData =
-                    it.getSerializable(BundleKey.KEY_SERVICE_BARBER_SHOP) as ServiceItem?
+                    it.getSerializable(BundleKey.KEY_SERVICE_DOCTER_SHOP) as ServiceItem?
             }
         }
 
@@ -177,7 +177,7 @@ class AddServiceFragment : BaseFragment() {
                         name = input_service_name.getText(),
                         image = imageUrl.toString(),
                         status = 0,
-                        barberShopAddressId = viewModel.addressId,
+                        clinicShopAddressId = viewModel.addressId,
                         addressName = edt_address.text.toString(),
                     )
                     if (viewModel.serviceData == null) {
