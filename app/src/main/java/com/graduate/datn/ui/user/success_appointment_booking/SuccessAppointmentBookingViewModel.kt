@@ -12,6 +12,7 @@ class SuccessAppointmentBookingViewModel @Inject constructor(var repo: Repositor
     var addressName: String ?= ""
     var address: String ?= ""
     var serviceId: String ?= ""
+
     var optionalServiceId: String ?= ""
     var optionalServicePrice: String ?= ""
  //   var barberNameId: User?= null

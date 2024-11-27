@@ -133,7 +133,7 @@ class CreateTimeWorkScheduleFragment : BaseFragment() {
             SimpleDateFormat("dd/MM/yyyy").parse(currentDate)?.let { Timestamp(it) }
 
         currentDateTimestamp?.let {
-            workScheduleCollection.whereEqualTo("idBarberName", auth.currentUser?.uid)
+            workScheduleCollection.whereEqualTo("idDocterName", auth.currentUser?.uid)
                 .whereGreaterThanOrEqualTo("dateTimestamp", it)
 //                .orderBy("date")
                 .get().addOnSuccessListener { documents ->

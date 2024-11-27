@@ -95,7 +95,7 @@ class SuccessAppointmentBookingFragment : BaseFragment() {
             tv_time.text = timeFrom
             tv_time_planned.text = intendTime
             tv_address.text = address
-            tv_department.text = optionalServiceId
+            tv_department.text = service
         }
     }
 

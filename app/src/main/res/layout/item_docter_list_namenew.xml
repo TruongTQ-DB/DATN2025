@@ -121,17 +121,6 @@
                    android:textAllCaps="true"
                    android:textColor="@color/white" />
            </androidx.constraintlayout.widget.ConstraintLayout>
-           <com.google.android.material.imageview.ShapeableImageView
-               android:id="@+id/img_fav"
-               android:layout_width="24dp"
-               android:layout_height="24dp"
-               android:scaleType="centerCrop"
-               android:layout_marginTop="6dp"
-               android:layout_marginRight="20dp"
-               app:layout_constraintRight_toRightOf="parent"
-               app:layout_constraintTop_toTopOf="parent"
-               app:shapeAppearance="@style/rounded_corner_doctor_avatar"
-               app:srcCompat="@drawable/ic_fav_24" />
 
        </androidx.constraintlayout.widget.ConstraintLayout>
 

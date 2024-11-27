@@ -172,7 +172,7 @@ class MakeAppointmentTimeFragment : BaseFragment() {
         showLoading()
         mCollection
             .whereEqualTo("approve", true)
-            .whereEqualTo("idBarberName", viewModel.docterNameId?.id)
+            .whereEqualTo("idDocterName", viewModel.docterNameId?.id)
             .whereEqualTo("date",
                 custom_booking.getDate()?.convertDate(DATE_FORMAT_6, DATE_FORMAT_2))
             .get()
@@ -268,7 +268,7 @@ class MakeAppointmentTimeFragment : BaseFragment() {
         val timestampCurent = Timestamp(Date(System.currentTimeMillis()))
         mCollection
             .whereEqualTo("approve", true)
-            .whereEqualTo("idBarberName", viewModel.docterNameId?.id)
+            .whereEqualTo("idDocterName", viewModel.docterNameId?.id)
             .whereEqualTo("date", date.convertDate(DATE_FORMAT_6, DATE_FORMAT_2))
             .get()
             .addOnSuccessListener { documents ->
@@ -304,7 +304,7 @@ class MakeAppointmentTimeFragment : BaseFragment() {
                 }
             }.addOnFailureListener {
                 hideLoading()
-                toast(R.string.error_400)
+
             }
     }
 
@@ -318,7 +318,7 @@ class MakeAppointmentTimeFragment : BaseFragment() {
         currentDateTimestamp?.let {
             mCollection
                 .whereEqualTo("approve", true)
-                .whereEqualTo("idBarberName", viewModel.docterNameId?.id)
+                .whereEqualTo("idDocterName", viewModel.docterNameId?.id)
                 .whereGreaterThanOrEqualTo("dateTimestamp", it)
                 .get()
                 .addOnSuccessListener { documents ->
@@ -347,7 +347,7 @@ class MakeAppointmentTimeFragment : BaseFragment() {
                     }
                 }.addOnFailureListener {
                     hideLoading()
-                    toast(R.string.error_400)
+
                 }
         }
     }

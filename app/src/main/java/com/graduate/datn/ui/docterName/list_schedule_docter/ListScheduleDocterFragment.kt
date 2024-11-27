@@ -155,7 +155,7 @@ class ListScheduleDocterFragment : BaseFragment() {
         mScheduleAdapter.clear()
         bookingCollection
             .whereEqualTo("date", formatDay)
-            .whereEqualTo("barberId", auth.currentUser?.uid)
+            .whereEqualTo("docterId", auth.currentUser?.uid)
             .orderBy("timeFrom").limit(20).get()
             .addOnSuccessListener { documents ->
                 hideLoading()

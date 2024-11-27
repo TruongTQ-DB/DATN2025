@@ -9,7 +9,7 @@ data class AddOptionalServiceRequest(
     @SerializedName("service_id")
     val serviceId: String,
 
-    @SerializedName("barber_shop_address_id")
+    @SerializedName("clinic_shop_address_id")
     val clinicShopAddressId: String ?= null,
 
     @SerializedName("address_name")

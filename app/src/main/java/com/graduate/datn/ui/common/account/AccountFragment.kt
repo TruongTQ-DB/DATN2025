@@ -18,6 +18,9 @@ import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.fragment_account.*
+import kotlinx.android.synthetic.main.home_fragment.tv_blood_type
+import kotlinx.android.synthetic.main.home_fragment.tv_height
+import kotlinx.android.synthetic.main.home_fragment.tv_weight
 
 class AccountFragment : BaseFragment() {
     private val viewModel: AccountViewModel by activityViewModels()
@@ -64,8 +67,23 @@ class AccountFragment : BaseFragment() {
     }
 
     private fun setUpInforView(data: User) {
-        cv_avatar.loadImageUrl(data.avatar)
-        tv_name.text = data.name
+        cv_avatar.loadImageUrl(data.avatar )
+        tv_name.text = data.name 
+
+      /*  if (data.account == 0) {
+            data.height?.let {
+                val height = it.toFloatOrNull()?.let { String.format("%.1f", it) } ?: "..."
+                val weight = data.weight?.toFloatOrNull()?.let { String.format("%.1f", it) } ?: "..."
+                tv_height.text = "$height Cm"
+                tv_weight.text = "$weight Kg"
+                tv_blood_type.text = "${data.blood_type ?: "..."}"
+            } ?: run {
+
+                tv_height.text = "..."
+                tv_weight.text = "..."
+                tv_blood_type.text = "${data.blood_type ?: "..."}"
+            }
+        }*/
     }
 
     override fun initListener() {

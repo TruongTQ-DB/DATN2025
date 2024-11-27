@@ -24,7 +24,7 @@ class ScheduleInformationViewModel @Inject constructor(var repo: Repository) : B
     var optionalServiceName: String ?= ""
     var optionalServicePrice: String ?= ""
 
-    var barberNameId: User?= null
+    var docterNameId: User?= null
     var date: String ?= ""
     var timeFrom: String ?= null
     var timeTo: String ?= null

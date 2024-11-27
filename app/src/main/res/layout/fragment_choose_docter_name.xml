@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="46dp"
         android:gravity="center"
-        android:text="Không có thơ cắt tóc!"
+        android:text="Không có bác sĩ nào!"
         android:textColor="@color/color_ACAAAF"
         android:textSize="@dimen/margin_18_dp"
         android:visibility="gone"

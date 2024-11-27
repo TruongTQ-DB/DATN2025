@@ -517,7 +517,7 @@ class AddDocterNameFragment : BaseFragment() {
         val serviceId = viewModel.serviceSelected.map { it.serviceId }
         if (!serviceId.isNullOrEmpty()) {
             optionalServiceCollection
-                .whereEqualTo("barberShopAddressId", viewModel.addressId)
+                .whereEqualTo("clinicShopAddressId", viewModel.addressId)
                 .whereIn("serviceId", serviceId)
                 .orderBy("name").get()
                 .addOnSuccessListener { documents ->
@@ -556,7 +556,7 @@ class AddDocterNameFragment : BaseFragment() {
 
     private fun getDataListService() {
         servicesCollection
-            .whereEqualTo("barberShopAddressId", viewModel.addressId)
+            .whereEqualTo("clinicShopAddressId", viewModel.addressId)
             .orderBy("name").get()
             .addOnSuccessListener { documents ->
                 hideLoading()
@@ -564,7 +564,7 @@ class AddDocterNameFragment : BaseFragment() {
                     if (edt_choose_address.text.toString().isNullOrEmpty()) {
                         toast(R.string.chose_cli_address)
                     } else {
-                        toast("Không có Khoa khám!")
+                        toast("Không có Khoa khám!") // không có dư liệu thôi
                     }
                 } else {
                     val dataList = documents.map { documentSnapshot ->

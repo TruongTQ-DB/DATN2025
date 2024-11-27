@@ -73,7 +73,7 @@ class ScheduleInformationFragment : BaseFragment() {
                 viewModel.optionalServicePrice = it.getString(BundleKey.KEY_OPTIONAL_SERVICE_PRICE)
             }
             if (it.containsKey(BundleKey.KEY_DOCTER_NAME)) {
-                viewModel.barberNameId = it.getSerializable(BundleKey.KEY_DOCTER_NAME) as User?
+                viewModel.docterNameId = it.getSerializable(BundleKey.KEY_DOCTER_NAME) as User?
             }
             if (it.containsKey(BundleKey.KEY_BOOK_DATE)) {
                 viewModel.date = it.getString(BundleKey.KEY_BOOK_DATE)
@@ -159,15 +159,15 @@ class ScheduleInformationFragment : BaseFragment() {
                                             ?.let { it1 -> com.google.firebase.Timestamp(it1) }
                                     val dataBooking = BookingResponse(
                                         userId = user?.id,
-                                        docterId = barberNameId?.id,
+                                        docterId = docterNameId?.id,
                                         serviceId = serviceId,
                                         optionalServiceId = optionalServiceId,
                                         serviceName = serviceName,
                                         optionalServiceName = optionalServiceName,
-                                        docterAvatar = barberNameId?.avatar,
-                                        docterName  = barberNameId?.name,
-                                        detailNameDocter = barberNameId?.detailname,
-                                        docterPhone = barberNameId?.phone,
+                                        docterAvatar = docterNameId?.avatar,
+                                        docterName  = docterNameId?.name,
+                                        detailNameDocter = docterNameId?.detailname,
+                                        docterPhone = docterNameId?.phone,
                                         clinicShopName = addressName,
                                         clinicShopAddress = address,
                                         avatarUser = user?.avatar,
@@ -187,7 +187,7 @@ class ScheduleInformationFragment : BaseFragment() {
                                             idBooking = documentReference.id
                                             val idBooking = documentReference.id
                                             mUserCollection
-                                                .whereEqualTo("id", viewModel.barberNameId?.id)
+                                                .whereEqualTo("id", viewModel.docterNameId?.id)
                                                 .get()
                                                 .addOnSuccessListener { querySnapshot ->
                                                     if (querySnapshot.isEmpty) {
@@ -204,7 +204,7 @@ class ScheduleInformationFragment : BaseFragment() {
                                                             if (barber.first().token.isNullOrEmpty()) {
                                                                 NotificationResponse(
                                                                     userId ="",
-                                                                    docterId = viewModel.barberNameId?.id,
+                                                                    docterId = viewModel.docterNameId?.id,
                                                                     bookingId = idBooking,
                                                                     title = "Đăng ký khám bệnh",
                                                                     message = "Bạn có lịch khám cho Bệnh nhân ${viewModel.user?.name} lúc ${viewModel.timeFrom} ${
@@ -212,7 +212,7 @@ class ScheduleInformationFragment : BaseFragment() {
                                                                             DATE_FORMAT_6,
                                                                             DATE_FORMAT_2)
                                                                     }",
-                                                                    docterName = viewModel.barberNameId?.name,
+                                                                    docterName = viewModel.docterNameId?.name,
 
                                                                     nameUser = viewModel.user?.name,
                                                                     date = viewModel.date,
@@ -227,7 +227,7 @@ class ScheduleInformationFragment : BaseFragment() {
                                                             } else {
                                                                 NotificationResponse(
                                                                     userId = "",
-                                                                    docterId = viewModel.barberNameId?.id,
+                                                                    docterId = viewModel.docterNameId?.id,
                                                                     bookingId = idBooking,
                                                                     title = "Đăng ký khám bệnh",
                                                                     message = "Bạn có lịch khám cho Bệnh nhân ${viewModel.user?.name} lúc ${viewModel.timeFrom} ${
@@ -235,7 +235,7 @@ class ScheduleInformationFragment : BaseFragment() {
                                                                             DATE_FORMAT_6,
                                                                             DATE_FORMAT_2)
                                                                     }",
-                                                                    docterName = viewModel.barberNameId?.name,
+                                                                    docterName = viewModel.docterNameId?.name,
                                                                     nameUser = viewModel.user?.name,
                                                                     date = viewModel.date,
                                                                     timeFrom = viewModel.timeFrom,
@@ -374,7 +374,7 @@ class ScheduleInformationFragment : BaseFragment() {
                     viewModel.optionalServiceId)
                 putString(BundleKey.KEY_OPTIONAL_SERVICE_PRICE,
                     viewModel.optionalServicePrice)
-                putSerializable(BundleKey.KEY_DOCTER_NAME, viewModel.barberNameId)
+                putSerializable(BundleKey.KEY_DOCTER_NAME, viewModel.docterNameId)
                 putString(BundleKey.KEY_BOOK_DATE,
                     viewModel.date?.convertDate(DATE_FORMAT_6, DATE_FORMAT_2))
                 putString(BundleKey.KEY_BOOK_TIME_FROM, viewModel.timeFrom)
@@ -387,10 +387,10 @@ class ScheduleInformationFragment : BaseFragment() {
 
     private fun setUpView() {
         viewModel.apply {
-            img_avatar.loadImageUrl(barberNameId?.avatar)
-            tv_barber_name.text = barberNameId?.name
+            img_avatar.loadImageUrl(docterNameId?.avatar)
+            tv_barber_name.text = docterNameId?.name
 
-            tv_detail_docter.text = barberNameId?.detailname
+            tv_detail_docter.text = docterNameId?.detailname
             tv_user_name.text = user?.name
             tv_user_birthday.text = user?.birthday
             tv_phone.text = user?.phone

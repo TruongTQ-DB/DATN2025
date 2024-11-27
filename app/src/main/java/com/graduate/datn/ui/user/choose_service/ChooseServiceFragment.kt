@@ -25,6 +25,7 @@ class ChooseServiceFragment : BaseFragment() {
     private val mAdapter: ChooseServiceAdapter by lazy {
         ChooseServiceAdapter(requireContext())
     }
+//    em sữa cái gì và ở đau
     private val db = FirebaseFirestore.getInstance()
     private val addressesCollection = db.collection(Constant.TABLE_SERVICE)
 
@@ -71,6 +72,7 @@ class ChooseServiceFragment : BaseFragment() {
                     mAdapter.showLoadingItem(true)
                     showLoading()
                     addressesCollection
+                        //em sua nhieu lam cai nao co barber em thay het bang docter
                         .whereEqualTo("clinicShopAddressId", viewModel.addressId)
                         .orderBy("name")
                         .startAfter(viewModel.lastVisibleDocument!!)

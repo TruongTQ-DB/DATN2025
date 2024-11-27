@@ -157,6 +157,8 @@ class ChooseDocterNameFragment : BaseFragment() {
         mAdapter.clear()
         viewModel.serviceId?.let {
             viewModel.optionalServiceId?.let { it1 ->
+                //cụ thể là còn bao nhiêu MH lỗi nửa e
+                // em cung ko bt tai loi mot cai thi cai sau lai loi
                 userCollection
                     .whereEqualTo("account", TYPE_ACCOUNT_DOCTER_NAME)
                     .whereEqualTo("clinicShopAddressId", viewModel.addressId)
