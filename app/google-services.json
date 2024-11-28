@@ -8,12 +8,20 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:298808374975:android:c85b66134acc114626f80a",
+        "mobilesdk_app_id": "1:298808374975:android:398caa703246118d26f80a",
         "android_client_info": {
-          "package_name": "com.graduate.datn.BaseApplication"
+          "package_name": "com.graduate.datn"
         }
       },
       "oauth_client": [
+        {
+          "client_id": "298808374975-h3arhi2urkd7m42bdcit13hb7d62lck7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.graduate.datn",
+            "certificate_hash": "41036283a7731aef1648dbe5bed225cb0846d978"
+          }
+        },
         {
           "client_id": "298808374975-4n0uchr85v7hql2m2bqi6d150nf0hvjo.apps.googleusercontent.com",
           "client_type": 3
