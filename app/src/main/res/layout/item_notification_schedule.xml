@@ -48,7 +48,7 @@
                 android:maxLines="2"
                 android:textColor="@color/md_black_1000"
                 android:textSize="@dimen/margin_18_dp"
-                tools:text="30 shine" />
+                tools:text="Phong Kham Da khoa" />
             <ImageView
                 android:id="@+id/imv_line"
                 android:layout_width="match_parent"
