@@ -384,7 +384,7 @@ class CreateTimeWorkScheduleFragment : BaseFragment() {
 
                 data.forEach { it ->
                     Log.e("testDataaa", it.date + "     " + it.timeRanges.toString())
-                    val query = workScheduleCollection.whereEqualTo("idBarberName",
+                    val query = workScheduleCollection.whereEqualTo("idDocterName",
                         auth.currentUser?.uid).whereEqualTo("date", it.date)
 
                     val existingScheduleTask = query.get()

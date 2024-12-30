@@ -218,13 +218,17 @@ class ScheduleDetailsFragment : BaseFragment() {
 
     private fun setUpData(data: BookingResponse?) {
         viewModel.data = data
-        if (auth.currentUser?.uid == data?.docterName) {
+        Log.e("thiss", "${data?.status == TYPE_NEW && data.status == 0}")
+        if (auth.currentUser?.uid == data?.docterId) {
             img_avatar.loadImageUrl(data?.avatarUser)
             tv_name.text = data?.nameUser
 
-            tv_detail_name.text = data?.detailNameDocter
+            tv_detail_name.text = data?.phoneUser
             viewModel.phone = data?.phoneUser
+
+            Log.e("thiss", "${data?.status == TYPE_NEW && data.status == 0}")
             if (data?.status == TYPE_NEW && data.status == 0) {
+                Log.e("thiss", " dk 2: ${data.timeStamp?.seconds!! < Timestamp.now().seconds}")
                 if (data.timeStamp?.seconds!! < Timestamp.now().seconds) {
                     setUpShowButton(true)
                     btn_complete.visible()
@@ -246,7 +250,7 @@ class ScheduleDetailsFragment : BaseFragment() {
                 btn_complete.gone()
                 btn_cancel.visible()
             } else {
-                setUpShowButton(false)
+                setUpShowButton(false) //e thao tác đến lịch vừa r đi e
             }
         } else {
             img_avatar.loadImageUrl(data?.avatarUser)

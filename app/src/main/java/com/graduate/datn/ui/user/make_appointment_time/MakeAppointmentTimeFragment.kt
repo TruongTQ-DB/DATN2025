@@ -90,7 +90,6 @@ class MakeAppointmentTimeFragment : BaseFragment() {
         img_barber_name.loadImageUrl(viewModel.docterNameId?.avatar)
         name.text = viewModel.docterNameId?.name
         tv_detail_docter.text = viewModel.docterNameId?.detailname
-   //     tv_barber_shop_address.text = viewModel.barberNameId?.address
         tv_address.text = viewModel.address
         tv_price.text = viewModel.optionalServicePrice + " VND"
 

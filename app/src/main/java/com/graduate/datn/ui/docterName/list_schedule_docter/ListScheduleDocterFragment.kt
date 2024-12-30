@@ -83,7 +83,7 @@ class ListScheduleDocterFragment : BaseFragment() {
                     showLoading()
                     bookingCollection
                         .whereEqualTo("date", convertDateFormat(bookingDate, isReturnDay = true))
-                        .whereEqualTo("barberId", auth.currentUser?.uid)
+                        .whereEqualTo("docterId", auth.currentUser?.uid)
                         .orderBy("timeFrom").startAfter(viewModel.lastVisibleDocument!!)
                         .limit(20)
                         .get().addOnSuccessListener { documents ->

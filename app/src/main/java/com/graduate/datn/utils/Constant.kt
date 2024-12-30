@@ -15,10 +15,8 @@ object Constant {
 
     const val TYPE_ACCOUNT_CUSTOMER = 0
     const val TYPE_ACCOUNT_DOCTER_NAME = 1
-    const val TYPE_ACCOUNT_HAIR_SHAMPOOER = 2
 
-    const val TYPE_SERVICE_CUTTING = 0
-    const val TYPE_SERVICE_HAIR_SHAMPOOER = 1
+
 
     const val PAYMENT_VNPAY_SUCCESS = "00"
     const val PAYMENT_VNPAY_01 = "01"
